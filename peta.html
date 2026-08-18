@@ -3,38 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMKM Desa - Manik Maraja</title>
+    <title>Pemetaan Digital - Desa Manik Maraja</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-abu text-gelap flex flex-col min-h-screen relative">
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen relative">
     <!-- Header dari module -->
     <div id="header-container"></div>
 
     <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full">
 
         <!-- Judul Section -->
-        <div class="pl-4 border-l-4 border-utama-500 mb-8 mt-4">
-            <h2 class="text-3xl font-extrabold text-gelap">Pemetaan Digital</h2>
-            <p class="text-gray-500 mt-2 font-medium">Visualisasi wilayah dan pusat pemerintahan dusun.</p>
+        <div class="pl-4 border-l-4 border-blue-600 mb-8 mt-4">
+            <h2 class="text-3xl font-extrabold text-gray-900">Pemetaan Digital</h2>
+            <p class="text-gray-500 mt-2 font-medium">Visualisasi wilayah huta, dusun, dan pusat pemerintahan desa.</p>
         </div>
 
         <!-- KONTEN PETA -->
         <div class="grid grid-cols-1 gap-10 mb-12">
             
-            <!-- Peta 1: Wilayah Desa -->
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-gray-200 hover:border-utama-500 hover:shadow-xl hover:shadow-utama-500/10 transition-all duration-300 flex flex-col">
+            <!-- Peta 0: Peta Huta 1 Manik Maraja (PNG Full Lebar & Panjang Proporsional) -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 border border-gray-200 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col">
                 <div class="flex items-center gap-3 mb-5">
-                    <div class="w-12 h-12 rounded-xl bg-utama-50 text-utama-500 flex items-center justify-center text-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-gray-900">Peta Huta 1 Manik Maraja</h3>
+                        <p class="text-sm text-gray-500 font-medium">Visualisasi tata wilayah dan lingkungan Dusun Huta 1.</p>
+                    </div>
+                </div>
+
+                <!-- Kontainer Bingkai dengan Lebar Penuh (w-full) dan Panjang/Tinggi Otomatis Menyesuaikan Tanpa Terpotong -->
+                <div class="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-inner bg-gray-50 relative group p-2">
+                    <img src="assets/img/peta/peta3.png" alt="Peta Huta 1 Manik Maraja" class="w-full h-auto object-contain rounded-xl">
+                </div>
+            </div>
+
+            <!-- Peta 1: Wilayah Desa -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 border border-gray-200 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-3 mb-5">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-extrabold text-gelap">Peta Wilayah Manik Maraja</h3>
+                        <h3 class="text-xl font-extrabold text-gray-900">Peta Wilayah Manik Maraja</h3>
                         <p class="text-sm text-gray-500 font-medium">Batas geografis dan area sekitar desa.</p>
                     </div>
                 </div>
 
                 <div class="w-full h-96 md:h-[450px] rounded-2xl overflow-hidden border border-gray-200 shadow-inner relative group">
-                    <div class="absolute inset-0 bg-utama-500/5 pointer-events-none group-hover:bg-transparent transition-colors duration-300"></div>
+                    <div class="absolute inset-0 bg-blue-500/5 pointer-events-none group-hover:bg-transparent transition-colors duration-300"></div>
                     <iframe 
                         class="w-full h-full border-0 filter saturate-[1.05]"
                         src="https://maps.google.com/maps?q=Desa%20Manik%20Maraja,%20Sidamanik,%20Simalungun&t=&z=14&ie=UTF8&iwloc=&output=embed" 
@@ -46,26 +64,26 @@
             </div>
 
             <!-- Peta 2: Kantor Pangulu (Balai Desa) -->
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-gray-200 hover:border-utama-500 hover:shadow-xl hover:shadow-utama-500/10 transition-all duration-300 flex flex-col">
+            <div class="bg-white rounded-3xl p-6 md:p-8 border border-gray-200 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-xl bg-utama-50 text-utama-500 flex items-center justify-center text-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-extrabold text-gelap">Lokasi Kantor Pangulu</h3>
+                            <h3 class="text-xl font-extrabold text-gray-900">Lokasi Kantor Pangulu</h3>
                             <p class="text-sm text-gray-500 font-medium">Pusat pelayanan administrasi dan balai pertemuan.</p>
                         </div>
                     </div>
                     <!-- Tombol Cepat Arahkan ke Google Maps App -->
-                    <a href="https://maps.google.com/?q=Kantor+Pangulu+Nagori+Manik+Maraja" target="_blank" class="inline-flex items-center justify-center bg-utama-50 text-utama-600 hover:bg-utama-500 hover:text-white px-4 py-2 rounded-xl text-sm font-bold transition-colors">
+                    <a href="https://maps.google.com/?q=Kantor+Pangulu+Nagori+Manik+Maraja" target="_blank" class="inline-flex items-center justify-center bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-xl text-sm font-bold transition-colors">
                         Buka di Aplikasi Maps
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                 </div>
 
                 <div class="w-full h-96 md:h-[450px] rounded-2xl overflow-hidden border border-gray-200 shadow-inner relative group">
-                    <div class="absolute inset-0 bg-utama-500/5 pointer-events-none group-hover:bg-transparent transition-colors duration-300"></div>
+                    <div class="absolute inset-0 bg-blue-500/5 pointer-events-none group-hover:bg-transparent transition-colors duration-300"></div>
                     <iframe 
                         class="w-full h-full border-0"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8267547556597!2d98.91275849651697!3d2.8663204980055426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197002fe5fce7%3A0x90b5f13fe990f044!2sKantor%20Pangulu%20Nagori%20Manik%20Maraja!5e0!3m2!1sid!2sid!4v1786704706644!5m2!1sid!2sid" 

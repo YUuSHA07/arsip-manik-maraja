@@ -3,45 +3,147 @@
     "id": "masif-es",
     "namaUsaha": "Masif Es Kristal",
     "kategori": "Kuliner / Olahan",
-    "namaPenjual": "Bapak Masif",
     "nomorHp": "085177315723",
     "waktuBuka": "Setiap Hari (08.00 - 21.00 WIB)",
     "deskripsi": "Penyedia es kristal higienis untuk kebutuhan rumah tangga maupun acara.",
     "gambar": [
-      "./assets/img/masif es kristal.png",
-      "./assets/img/mie-balap.png"
+      "./assets/img/UMKM/masif-es-kristal/masif-es-kristal1.png"
     ],
-    "gmapsEmbed": "https://www.google.com/maps/embed?pb=...",
-    "gmapsLink": "https://maps.google.com/..."
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.840260660189!2d98.91520847474246!3d2.8624392971142134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197adfe485131%3A0xbd8203b34ad6c13b!2sMasif%20Es%20Kristal!5e0!3m2!1sid!2sid!4v1786777890071!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/p6QyC9sRa9nkGDCq8"
   },
   {
     "id": "mie-balap",
     "namaUsaha": "Mie Balap Bang Doyok",
     "kategori": "Kuliner",
-    "namaPenjual": "Bang Doyok",
-    "nomorHp": "082198765432",
-    "waktuBuka": "Senin - Sabtu (06.00 - 12.00 WIB)",
+    "nomorHp": "0895326465392",
+    "waktuBuka": "Setiap hari (06.30 - 12.00 WIB)",
     "deskripsi": "Mie balap khas Medan yang lezat dan gurih dengan porsi memuaskan.",
     "gambar": [
-      "./assets/img/mie-balap-1.png",
-      "./assets/img/mie-balap-2.png"
+      "./assets/img/UMKM/mie-balap-bang-doyok/mie-balap-bang-doyok2.jpg",
+      "./assets/img/UMKM/mie-balap-bang-doyok/mie-balap-bang-doyok1.jpg",
+      "./assets/img/UMKM/mie-balap-bang-doyok/mie-balap-bang-doyok3.jpg"
     ],
-    "gmapsEmbed": "https://www.google.com/maps/embed?pb=...",
-    "gmapsLink": "https://maps.google.com/..."
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8368848454265!2d98.91668!3d2.8634099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031970068c103df%3A0x52a55354c618bdd3!2sMie%20Balap%20Bg%20Doyok!5e0!3m2!1sid!2sid!4v1786778003176!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/JMYHrXujuGGDzNTB8"
   },
   {
-    "id": "jahit-henri",
-    "namaUsaha": "Jahit Henri Sampurno",
-    "kategori": "Jasa & Konveksi",
-    "namaPenjual": "Henri Sampurno",
-    "nomorHp": "081311223344",
-    "waktuBuka": "Senin - Minggu (09.00 - 17.00 WIB)",
+    "id": "DJ-Residence",
+    "namaUsaha": "DJ Residence",
+    "kategori": "Properti / Kontrakan",
+    "nomorHp": "081370507910",
+    "waktuBuka": "Setiap Hari",
+    "deskripsi": "Indekos atau Kontrakan.",
+    "gambar": [
+      "./assets/img/UMKM/dj-residence/dj-residence1.jpg",
+      "./assets/img/UMKM/dj-residence/dj-residence2.jpg"
+    ],
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592.3492777105495!2d98.91622161430718!3d2.863930516372116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031970047848e97%3A0x9223a0907aa3996a!2sDJ%20Residence!5e0!3m2!1sid!2sid!4v1786778532657!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/f7poAAgHNtB68EUx6"
+  },
+  {
+    "id": "Pangkas-SL",
+    "namaUsaha": "Pangkas SL",
+    "kategori": "Layanan",
+    "nomorHp": "085275046787",
+    "waktuBuka": "Senin - Kamis (10.00-16.30 WIB)",
+    "deskripsi": "Tempat cukur rambut.",
+    "gambar": [
+      "./assets/img/UMKM/pangkas-sl/pangkas-sl1.jpg",
+      "./assets/img/UMKM/pangkas-sl/pangkas-sl4.jpg",
+      "./assets/img/UMKM/pangkas-sl/pangkas-sl2.jpg",
+      "./assets/img/UMKM/pangkas-sl/pangkas-sl3.jpg"
+    ],
+    "gmapsEmbed": "",
+    "gmapsLink": ""
+  },
+  {
+    "id": "Jahit-Dian-Zskafi",
+    "namaUsaha": "Jahit Dian Zskafi",
+    "kategori": "Jasa / Konveksi",
+    "nomorHp": "082365187460",
+    "waktuBuka": "Setiap hari (08.00-17.00 WIB)",
     "deskripsi": "Jasa jahit pakaian harian, seragam, dan perbaikan busana rapi berkualitas.",
     "gambar": [
-      "./assets/img/penjahit-1.png",
-      "./assets/img/penjahit-2.png"
+      "./assets/img/UMKM/jahit-dian/jahit-dian1.jpg",
+      "./assets/img/UMKM/jahit-dian/jahit-dian2.jpg",
+      "./assets/img/UMKM/jahit-dian/jahit-dian3.jpg",
+      "./assets/img/UMKM/jahit-dian/jahit-dian4.jpg"
     ],
-    "gmapsEmbed": "https://www.google.com/maps/embed?pb=...",
-    "gmapsLink": "https://maps.google.com/..."
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.045653896138!2d98.91653!3d2.86398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031970012e9bc0f%3A0xe98a9a67bd60243a!2sTukang%20Jahit%20Dian%20Zskafi!5e1!3m2!1sid!2sid!4v1786779029520!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/NfCxGj4UEP1oxBwe8"
+  },
+  {
+    "id": "Sate-pasaman",
+    "namaUsaha": "Sate Padang Asli Pasaman",
+    "kategori": "Kuliner",
+    "nomorHp": "085260530473",
+    "waktuBuka": "Setiap Hari (15.00 - 21.00 WIB  )",
+    "deskripsi": "Sate Padang asli pasaman dengan bahan berkualitas dan cita rasa yang lezat.",
+    "gambar": [
+      "./assets/img/UMKM/sate-padang/sate-padang1.jpeg",
+      "./assets/img/UMKM/sate-padang/sate-padang2.jpeg"
+    ],
+    "gmapsEmbed": "",
+    "gmapsLink": ""
+  },
+  {
+    "id": "ERP-Repair",
+    "namaUsaha": "ERP Repair",
+    "kategori": "layanan / servis",
+    "nomorHp": "",
+    "waktuBuka": "",
+    "deskripsi": "Bengkel sepeda motor.",
+    "gambar": [
+      "./assets/img/UMKM/erp-repair/erp-repair1.jpg",
+      "./assets/img/UMKM/erp-repair/erp-repair2.jpg",
+      "./assets/img/UMKM/erp-repair/erp-repair3.jpg"
+    ],
+    "gmapsEmbed": "",
+    "gmapsLink": ""
+  },
+  {
+    "id": "Jaka-bengkel",
+    "namaUsaha": "Jaka Bengkel",
+    "kategori": "Layanan",
+    "nomorHp": "082185021494",
+    "waktuBuka": "Senin-Sabtu (09.00-17.00 WIB)",
+    "deskripsi": "Bengkel sepeda motor.",
+    "gambar": [
+      "./assets/img/UMKM/jaka-bengkel/jaka-bengkel1.jpg",
+      "./assets/img/UMKM/jaka-bengkel/jaka-bengkel2.jpg",
+      "./assets/img/UMKM/jaka-bengkel/jaka-bengkel3.jpg",
+      "./assets/img/UMKM/jaka-bengkel/jaka-bengkel4.jpg"
+    ],
+    "gmapsEmbed": "",
+    "gmapsLink": ""
+  },
+  {
+    "id": "Jahit-Aina",
+    "namaUsaha": "Jahit Aina",
+    "kategori": "Jasa / Konveksi",
+    "nomorHp": "",
+    "waktuBuka": "",
+    "deskripsi": "Penjahit.",
+    "gambar": [
+      "./assets/img/UMKM/jahit-aina/jahit-aina1.jpg"
+    ],
+    "gmapsEmbed": "",
+    "gmapsLink": ""
+  },
+  {
+    "id": "Warung-plastik-(undefined)",
+    "namaUsaha": "Warung-plastik-(undefined)",
+    "kategori": "Jasa / Konveksi",
+    "nomorHp": "",
+    "waktuBuka": "",
+    "deskripsi": "Penjahit.",
+    "gambar": [
+      "./assets/img/UMKM/warung-plastik/warung-plastik1.jpg",
+      "./assets/img/UMKM/warung-plastik/warung-plastik2.jpg",
+      "./assets/img/UMKM/warung-plastik/warung-plastik3.jpg"
+    ],
+    "gmapsEmbed": "",
+    "gmapsLink": ""
   }
 ]
