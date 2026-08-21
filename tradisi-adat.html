@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradisi Adat - Desa Manik Maraja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <div id="header-container"></div>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10">
+            <div class="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-1">Warisan Budaya</div>
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Tradisi Adat</h1>
+            <p class="text-gray-600 text-base leading-relaxed mb-8">
+                Manik Maraja dihuni masyarakat berbudaya Jawa dan Batak yang hidup berdampingan. Tiap kelompok menjaga tradisinya sendiri, sementara kerukunan lintas agama dirawat lewat program bersama di tingkat nagori.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <span class="inline-block bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full font-semibold mb-3">Adat Jawa</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Suroan</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Suroan adalah tradisi tahunan warga berbudaya Jawa dalam menyambut bulan Suro (Muharram), berdampingan dengan tradisi Jawa lain seperti punggahan dan nemokkan. Warga berbudaya Batak pun turut mengadopsi sejumlah unsurnya, seperti tradisi kenduri, sebagai bentuk akulturasi budaya di nagori ini.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <span class="inline-block bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-semibold mb-3">Syiar Islam</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Penyambutan 10 Muharram</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Bagi warga muslim, momen 10 Muharram dirayakan sebagai salah satu hari besar Islam, berdampingan dengan peringatan Maulid Nabi dan Isra Mikraj, serta kegiatan keagamaan rutin seperti pengajian dan wirid mingguan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 md:p-8 border border-blue-100 shadow-sm">
+                <span class="inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold mb-3">Program Nagori</span>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Kampung Moderasi Beragama</h3>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                    Kerukunan lintas agama di Manik Maraja — yang dihuni sekitar 80% warga muslim dan 20% warga Kristen — dijaga lewat program resmi <strong>Kampung Moderasi Beragama (KMB)</strong> yang dicanangkan Kementerian Agama Kabupaten Simalungun pada 2023, ditandai plang di halaman kantor desa. Program ini melengkapi <strong>Kampung Pancasila</strong> yang lebih dulu diresmikan di Dusun III pada 2022. Semangat gotong royong pembangunan turut menjadi ruang temu warga lintas suku dan agama sehari-hari.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4 border-t border-blue-200 text-sm font-semibold text-blue-800">
+                    <span class="bg-white px-4 py-2 rounded-lg shadow-sm border border-blue-100">~80% Islam</span>
+                    <span class="bg-white px-4 py-2 rounded-lg shadow-sm border border-blue-100">~20% Kristen</span>
+                    <span class="bg-white px-4 py-2 rounded-lg shadow-sm border border-blue-100">Gotong Royong</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module">
+        import { renderHeader, initHeaderEvents } from './src/components/Header.js';
+        import { renderFooter } from './src/components/Footer.js';
+
+        // Render header dengan parameter 'profil' agar menu Profil Desa aktif
+        document.getElementById('header-container').innerHTML = renderHeader('profil');
+        document.getElementById('footer-container').innerHTML = renderFooter();
+        initHeaderEvents();
+    </script>
+</body>
+</html>

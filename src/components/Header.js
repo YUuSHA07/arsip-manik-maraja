@@ -22,8 +22,13 @@ export function renderHeader(activeMenu = '') {
                         <a href="sejarah.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm">Sejarah Desa</a>
                         <a href="visi-misi.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm">Visi dan Misi</a>
                         <a href="status-desa.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm">Status Desa</a>
+                        <a href="tradisi-adat.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm">Tradisi Adat</a>
                     </div>
                 </div>
+
+                <a href="dusun-1.html" class="hover:underline ${activeMenu === 'dusun1' ? 'font-bold underline' : ''}">
+                    Dusun 1
+                </a>
 
                 <a href="peta.html" class="hover:underline ${activeMenu === 'peta' ? 'font-bold underline' : ''}">
                     Peta
@@ -52,7 +57,9 @@ export function renderHeader(activeMenu = '') {
                 <a href="sejarah.html" class="block py-1 hover:bg-blue-700 px-2 rounded text-sm">Sejarah Desa</a>
                 <a href="visi-misi.html" class="block py-1 hover:bg-blue-700 px-2 rounded text-sm">Visi dan Misi</a>
                 <a href="status-desa.html" class="block py-1 hover:bg-blue-700 px-2 rounded text-sm">Status Desa</a>
+                <a href="tradisi-adat.html" class="block py-1 hover:bg-blue-700 px-2 rounded text-sm">Tradisi Adat</a>
             </div>
+            <a href="dusun-1.html" class="py-1 hover:bg-blue-700 px-2 rounded">Dusun 1</a>
             <a href="peta.html" class="py-1 hover:bg-blue-700 px-2 rounded">Peta</a>
             <a href="umkm.html" class="py-1 hover:bg-blue-700 px-2 rounded">UMKM Desa</a>
             <a href="galeri-kkn.html" class="py-1 hover:bg-blue-700 px-2 rounded">Galeri KKN</a>
