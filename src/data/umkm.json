@@ -1,18 +1,5 @@
 [
   {
-    "id": "masif-es",
-    "namaUsaha": "Masif Es Kristal",
-    "kategori": "Kuliner / Olahan",
-    "nomorHp": "085177315723",
-    "waktuBuka": "Setiap Hari (08.00 - 21.00 WIB)",
-    "deskripsi": "Penyedia es kristal higienis untuk kebutuhan rumah tangga maupun acara.",
-    "gambar": [
-      "./assets/img/UMKM/masif-es-kristal/masif-es-kristal1.png"
-    ],
-    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.840260660189!2d98.91520847474246!3d2.8624392971142134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197adfe485131%3A0xbd8203b34ad6c13b!2sMasif%20Es%20Kristal!5e0!3m2!1sid!2sid!4v1786777890071!5m2!1sid!2sid",
-    "gmapsLink": "https://maps.app.goo.gl/p6QyC9sRa9nkGDCq8"
-  },
-  {
     "id": "mie-balap",
     "namaUsaha": "Mie Balap Bang Doyok",
     "kategori": "Kuliner",
@@ -20,7 +7,6 @@
     "waktuBuka": "Setiap hari (06.30 - 12.00 WIB)",
     "deskripsi": "Mie balap khas Medan yang lezat dan gurih dengan porsi memuaskan.",
     "gambar": [
-      "./assets/img/UMKM/mie-balap-bang-doyok/mie-balap-bang-doyok2.jpg",
       "./assets/img/UMKM/mie-balap-bang-doyok/mie-balap-bang-doyok1.jpg",
       "./assets/img/UMKM/mie-balap-bang-doyok/mie-balap-bang-doyok3.jpg"
     ],
@@ -74,20 +60,6 @@
     "gmapsLink": "https://maps.app.goo.gl/NfCxGj4UEP1oxBwe8"
   },
   {
-    "id": "Sate-pasaman",
-    "namaUsaha": "Sate Padang Asli Pasaman",
-    "kategori": "Kuliner",
-    "nomorHp": "085260530473",
-    "waktuBuka": "Setiap Hari (15.00 - 21.00 WIB  )",
-    "deskripsi": "Sate Padang asli pasaman dengan bahan berkualitas dan cita rasa yang lezat.",
-    "gambar": [
-      "./assets/img/UMKM/sate-padang/sate-padang1.jpeg",
-      "./assets/img/UMKM/sate-padang/sate-padang2.jpeg"
-    ],
-    "gmapsEmbed": "",
-    "gmapsLink": ""
-  },
-  {
     "id": "ERP-Repair",
     "namaUsaha": "ERP Repair",
     "kategori": "layanan / servis",
@@ -95,12 +67,54 @@
     "waktuBuka": "",
     "deskripsi": "Bengkel sepeda motor.",
     "gambar": [
+      "./assets/img/UMKM/erp-repair/erp-repair3.jpg",
       "./assets/img/UMKM/erp-repair/erp-repair1.jpg",
-      "./assets/img/UMKM/erp-repair/erp-repair2.jpg",
-      "./assets/img/UMKM/erp-repair/erp-repair3.jpg"
+      "./assets/img/UMKM/erp-repair/erp-repair2.jpg"
     ],
-    "gmapsEmbed": "",
-    "gmapsLink": ""
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.049802278259!2d98.9202219!3d2.8627287999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197005e80f13b%3A0xe999b236c5289c19!2sERP%20Repair!5e1!3m2!1sid!2sid!4v1787403192029!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/j3C5g7Vzh4a7m4yR8"
+  },
+  {
+    "id": "Sate-pasaman",
+    "namaUsaha": "Sate Padang Asli Pasaman",
+    "kategori": "Kuliner",
+    "nomorHp": "085260530473",
+    "waktuBuka": "Setiap Hari (15.00 - 21.00 WIB  )",
+    "deskripsi": "Sate Padang asli pasaman dengan bahan berkualitas dan cita rasa yang lezat.",
+    "gambar": [
+      "./assets/img/UMKM/sate-padang/sate-padang1.jpg",
+      "./assets/img/UMKM/sate-padang/sate-padang2.jpeg"
+    ],
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.047910334057!2d98.9166315!3d2.8632995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197001ce65ef1%3A0x2c1b249335ba1ca!2sSate%20Padang%20Asli%20Pariaman!5e1!3m2!1sid!2sid!4v1787403074853!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/DYKQMGVxRJ5Uika9A"
+  },
+  {
+    "id": "Toko-kelontong-wira-(plastik)",
+    "namaUsaha": "Toko kelontong wira (plastik)",
+    "kategori": "Belanja / Toko",
+    "nomorHp": "081264603753",
+    "waktuBuka": "Setiap hari (kecuali tanggal merah) (08.00-19.00 WIB)",
+    "deskripsi": "Toko Bahan Makanan.",
+    "gambar": [
+      "./assets/img/UMKM/warung-plastik/warung-plastik1.jpg",
+      "./assets/img/UMKM/warung-plastik/warung-plastik2.jpg",
+      "./assets/img/UMKM/warung-plastik/warung-plastik3.jpg"
+    ],
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.0505563650927!2d98.9172404!3d2.8625013000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30319700211fdf8d%3A0x76265a35979d6195!2sToko%20kelontong%20Wira!5e1!3m2!1sid!2sid!4v1787403468001!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/zDJAcuyRTZ1hsYax7"
+  },
+  {
+    "id": "Jahit-Aina",
+    "namaUsaha": "Jahit Aina",
+    "kategori": "Jasa / Konveksi",
+    "nomorHp": "081361369796",
+    "waktuBuka": "Setiap Hari (09.00-17.00 WIB)",
+    "deskripsi": "Penjahit.",
+    "gambar": [
+      "./assets/img/UMKM/jahit-aina/jahit-aina1.jpg"
+    ],
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.050158612467!2d98.9178712!3d2.8626212999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197001c52c755%3A0x5066f87c3bb1d086!2sTukang%20Jahit%20Aina!5e1!3m2!1sid!2sid!4v1787403321614!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/8haK1hXYFhqtgU3r9"
   },
   {
     "id": "Jaka-bengkel",
@@ -119,31 +133,72 @@
     "gmapsLink": ""
   },
   {
-    "id": "Jahit-Aina",
-    "namaUsaha": "Jahit Aina",
-    "kategori": "Jasa / Konveksi",
-    "nomorHp": "",
+    "id": "Bibi-pangkas",
+    "namaUsaha": "Bibi Pangkas",
+    "kategori": "Layanan",
+    "nomorHp": "081375881034",
+    "waktuBuka": "Senin-Sabtu (09.00-17.00 WIB)",
+    "deskripsi": "Tempat cukur rambut.",
+    "gambar": [
+      "./assets/img/UMKM/bibi-pangkas/bibi-pangkas1.jpg",
+      "./assets/img/UMKM/bibi-pangkas/bibi-pangkas2.jpg"
+    ],
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.050360142546!2d98.9170352!3d2.8625605000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031970017da68ef%3A0xc3c3fbba6620437a!2sPangkas%20Bg%20Bibi!5e1!3m2!1sid!2sid!4v1787403752743!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/ZawGXk1LARng4YjB7"
+  },
+  {
+    "id": "Warung-Bibi-Pangkas",
+    "namaUsaha": "Warung Bibi Pangkas",
+    "kategori": "Makanan dan Minuman",
+    "nomorHp": "081375881034",
+    "waktuBuka": "Setiap hari (09.00-21.00 WIB  )",
+    "deskripsi": "Warung makanan kecil.",
+    "gambar": [
+      "./assets/img/UMKM/warung-bibi-pangkas/warung-bibi-pangkas1.jpg",
+      "./assets/img/UMKM/warung-bibi-pangkas/warung-bibi-pangkas2.jpg"
+    ],
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.050796665898!2d98.91704709999999!3d2.8624288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197002a203869%3A0x9bd4dc32e14baa98!2sWarung%20Bibi%20Pangkas!5e1!3m2!1sid!2sid!4v1787403894762!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/v8BL6bN5NLx9KGQd8"
+  },
+    {
+    "id": "Jahit-Heri-Sam[purno",
+    "namaUsaha": "Jahit Heri Sampurno",
+    "kategori": "Layanan",
+    "nomorHp": "081360588543",
     "waktuBuka": "",
     "deskripsi": "Penjahit.",
     "gambar": [
-      "./assets/img/UMKM/jahit-aina/jahit-aina1.jpg"
+      "./assets/img/UMKM/jahit-heri/heri-sampurno.jpg"
     ],
     "gmapsEmbed": "",
     "gmapsLink": ""
   },
-  {
-    "id": "Warung-plastik-(undefined)",
-    "namaUsaha": "Warung-plastik-(undefined)",
-    "kategori": "Jasa / Konveksi",
-    "nomorHp": "",
-    "waktuBuka": "",
-    "deskripsi": "Penjahit.",
+    {
+    "id": "Warung-Wak-Atik",
+    "namaUsaha": "Warung Wak Atik",
+    "kategori": "Makanan dan Minuman",
+    "nomorHp": "082299537415",
+    "waktuBuka": "Setiap hari (12.00-20.00 WIB  )",
+    "deskripsi": "Warung Makanan.",
     "gambar": [
-      "./assets/img/UMKM/warung-plastik/warung-plastik1.jpg",
-      "./assets/img/UMKM/warung-plastik/warung-plastik2.jpg",
-      "./assets/img/UMKM/warung-plastik/warung-plastik3.jpg"
+      "./assets/img/UMKM/wak-atik/wak-atik1.jpg",
+      "./assets/img/UMKM/wak-atik/wak-atik2.jpg"
     ],
-    "gmapsEmbed": "",
-    "gmapsLink": ""
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.0485800332276!2d98.91681679999999!3d2.8630975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197b5770ea6a3%3A0x116569cdb4330125!2sBakso%20Wak%20Atik%20(Warung%20Ibu)!5e1!3m2!1sid!2sid!4v1787404095927!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/h5GdqBpTQzN7tJqh7"
+  },
+  {
+    "id": "masif-es",
+    "namaUsaha": "Masif Es Kristal",
+    "kategori": "Kuliner / Olahan",
+    "nomorHp": "085177315723",
+    "waktuBuka": "Setiap Hari (08.00 - 21.00 WIB)",
+    "deskripsi": "Penyedia es kristal higienis untuk kebutuhan rumah tangga maupun acara.",
+    "gambar": [
+      "./assets/img/UMKM/masif-es-kristal/masif1.jpg",
+      "./assets/img/UMKM/masif-es-kristal/masif2.jpg"
+    ],
+    "gmapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.840260660189!2d98.91520847474246!3d2.8624392971142134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197adfe485131%3A0xbd8203b34ad6c13b!2sMasif%20Es%20Kristal!5e0!3m2!1sid!2sid!4v1786777890071!5m2!1sid!2sid",
+    "gmapsLink": "https://maps.app.goo.gl/p6QyC9sRa9nkGDCq8"
   }
-]
+] 
