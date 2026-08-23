@@ -186,10 +186,13 @@
                         galeriSlider.innerHTML += `
                             <div onclick="window.location.href='galeri-detail.html?id=${item.id}'" class="w-[85vw] sm:w-[45vw] md:w-[calc(33.333%-16px)] flex-shrink-0 snap-start bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition group cursor-pointer">
                                 <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400 group-hover:scale-105 transition duration-300 overflow-hidden">
-                                    <img src="${item.gambar}" alt="${item.judul}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<span class=\\'text-sm\\'>📷 ${item.judul}</span>'">
+                                    <img src="${item.gambar}" alt="${item.judul}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\\'flex items-center justify-center h-full text-gray-400 text-sm gap-2\\'><svg class=\\'w-5 h-5\\' fill=\\'none\\' stroke=\\'currentColor\\' viewBox=\\'0 0 24 24\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z\\'></path><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M15 13a3 3 0 11-6 0 3 3 0 016 0z\\'></path></svg>${item.judul}</div>'">
                                 </div>
                                 <div class="p-4 bg-white relative z-10">
-                                    <span class="text-xs text-utama-600 font-semibold">${item.tanggal}</span>
+                                    <span class="text-xs text-utama-600 font-semibold flex items-center gap-1.5 mb-1">
+                                        <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        ${item.tanggal}
+                                    </span>
                                     <h4 class="font-bold text-gray-800 mt-1">${item.judul}</h4>
                                     <p class="text-gray-500 text-xs mt-1 line-clamp-2">${item.deskripsi}</p>
                                 </div>
