@@ -8,7 +8,7 @@ export function renderHeader(activeMenu = '') {
     <header class="bg-[#74A12E] text-white p-4 shadow-md sticky top-0 z-50 font-jakarta transition-all duration-300">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-xl font-extrabold flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <span class="tracking-tight">Arsip Desa Manik Maraja</span>
+                <span class="tracking-tight">Huta 1 Manik Maraja</span>
             </a>
 
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
