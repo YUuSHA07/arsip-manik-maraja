@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pemetaan Digital - Desa Manik Maraja</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        utama: {
+                            50: '#f6f9f2',
+                            100: '#e9f2df',
+                            200: '#d1e4be',
+                            500: '#74A12E', /* Base Color Matcha */
+                            600: '#5a8022',
+                            700: '#46631d',
+                            900: '#23330e',
+                        },
+                        gelap: '#111827',
+                        abu: '#F9FAFB',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen relative">
     <!-- Header dari module -->
