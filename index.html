@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Resmi & Arsip Desa Manik Maraja</title>
+    
+    <!-- Google Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -37,10 +43,11 @@
         /* Memastikan tidak ada horizontal scroll */
         body {
             overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen w-full m-0 p-0">
+<body class="bg-abu text-gelap flex flex-col min-h-screen w-full m-0 p-0">
 
     <div id="header-container" class="w-full z-50"></div>
 
@@ -51,7 +58,8 @@
                 <img id="banner-img" src="" alt="Banner Desa Manik Maraja" class="absolute inset-0 w-full h-full object-cover opacity-80 banner-fade">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-16 lg:p-24 pb-16 md:pb-24">
-                    <span id="banner-badge" class="inline-block bg-blue-600/90 text-white text-xs md:text-sm px-4 py-1.5 rounded-full font-semibold w-max mb-4 backdrop-blur-sm shadow-lg">
+                    <!-- Badge diubah menjadi warna hijau utama (#74A12E) -->
+                    <span id="banner-badge" class="inline-block bg-utama-500 text-white text-xs md:text-sm px-4 py-1.5 rounded-full font-bold uppercase tracking-wider w-max mb-4 backdrop-blur-sm shadow-lg">
                         Desa Manik Maraja
                     </span>
                     <h1 id="banner-title" class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight transition-all duration-500 max-w-5xl drop-shadow-lg">
@@ -62,10 +70,10 @@
                     </p>
                 </div>
 
-                <button id="prev-slide" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/90 text-white hover:text-gray-900 p-4 rounded-full backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 focus:outline-none shadow-lg">
+                <button id="prev-slide" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-utama-500 text-white p-4 rounded-full backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 focus:outline-none shadow-lg">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
-                <button id="next-slide" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/90 text-white hover:text-gray-900 p-4 rounded-full backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 focus:outline-none shadow-lg">
+                <button id="next-slide" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-utama-500 text-white p-4 rounded-full backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 focus:outline-none shadow-lg">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                 </button>
 
@@ -125,8 +133,9 @@
 
         function renderDots() {
             const dotsContainer = document.getElementById('dots-container');
+            // Titik indikator aktif menggunakan warna hijau matcha (bg-utama-500)
             dotsContainer.innerHTML = bannerList.map((_, i) => `
-                <button onclick="goToSlide(${i})" class="w-3 h-3 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-blue-500 w-10' : 'bg-white/60 hover:bg-white'}"></button>
+                <button onclick="goToSlide(${i})" class="h-3 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-utama-500 w-10' : 'bg-white/60 hover:bg-white w-3'}"></button>
             `).join('');
         }
 

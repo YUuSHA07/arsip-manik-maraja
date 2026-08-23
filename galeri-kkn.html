@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri & Dokumentasi KKN - Desa Manik Maraja</title>
+    
+    <!-- Google Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,24 +38,27 @@
     <style>
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
     </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
+<body class="bg-abu text-gelap flex flex-col min-h-screen">
     <div id="header-container"></div>
 
     <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full overflow-hidden">
         
-        <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-10 mb-10 shadow-lg text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="bg-utama-500 text-white rounded-2xl p-6 md:p-10 mb-10 shadow-lg text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="max-w-2xl">
-                <span class="bg-blue-500 text-blue-100 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">Pengabdian Masyarakat</span>
+                <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider backdrop-blur-sm">Pengabdian Masyarakat</span>
                 <h1 class="text-3xl md:text-4xl font-bold mt-3">Galeri & Dokumentasi KKN Desa Manik Maraja</h1>
-                <p class="text-blue-100 mt-2 text-sm md:text-base leading-relaxed">
+                <p class="text-white/90 mt-2 text-sm md:text-base leading-relaxed">
                     Arsip kegiatan, program kerja, dan kenangan pengabdian tim mahasiswa Kuliah Kerja Nyata (KKN) dalam mendukung digitalisasi dan pemberdayaan Desa Manik Maraja.
                 </p>
             </div>
             <div class="flex-shrink-0 bg-white/10 p-4 rounded-xl border border-white/20 text-center min-w-[160px]">
                 <span class="block text-2xl font-extrabold">2026</span>
-                <span class="text-xs text-blue-100">Tim Mahasiswa KKN UINSU</span>
+                <span class="text-xs text-white/90">Tim Mahasiswa KKN UINSU</span>
             </div>
         </div>
 
@@ -60,14 +69,14 @@
                 </h2>
                 <div class="flex items-center gap-3">
                     <div class="flex gap-2">
-                        <button onclick="slide('proker-slider', -1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-blue-600 transition shadow-sm">
+                        <button onclick="slide('proker-slider', -1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-utama-600 transition shadow-sm">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
-                        <button onclick="slide('proker-slider', 1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-blue-600 transition shadow-sm">
+                        <button onclick="slide('proker-slider', 1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-utama-600 transition shadow-sm">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
                     </div>
-                    <a href="proker-lengkap.html" class="text-sm font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-4 py-2 rounded-lg transition">Lihat Selengkapnya</a>
+                    <a href="proker-lengkap.html" class="text-sm font-semibold text-utama-700 hover:text-utama-800 bg-utama-50 px-4 py-2 rounded-lg transition">Lihat Selengkapnya</a>
                 </div>
             </div>
             
@@ -82,14 +91,14 @@
                 </h2>
                 <div class="flex items-center gap-3">
                     <div class="flex gap-2">
-                        <button onclick="slide('galeri-slider', -1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-blue-600 transition shadow-sm">
+                        <button onclick="slide('galeri-slider', -1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-utama-600 transition shadow-sm">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
-                        <button onclick="slide('galeri-slider', 1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-blue-600 transition shadow-sm">
+                        <button onclick="slide('galeri-slider', 1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-utama-600 transition shadow-sm">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
                     </div>
-                    <a href="galeri-lengkap.html" class="text-sm font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-4 py-2 rounded-lg transition">Lihat Selengkapnya</a>
+                    <a href="galeri-lengkap.html" class="text-sm font-semibold text-utama-700 hover:text-utama-800 bg-utama-50 px-4 py-2 rounded-lg transition">Lihat Selengkapnya</a>
                 </div>
             </div>
             
@@ -103,22 +112,22 @@
             </h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
                 <div class="p-4 bg-gray-50 rounded-lg border border-gray-100">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">👨‍🎓</div>
+                    <div class="w-16 h-16 bg-utama-100 text-utama-700 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">👨‍🎓</div>
                     <h4 class="font-bold text-gray-800 text-sm">Nama Ketua</h4>
                     <span class="text-xs text-gray-500">Ketua Kelompok</span>
                 </div>
                 <div class="p-4 bg-gray-50 rounded-lg border border-gray-100">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">💻</div>
+                    <div class="w-16 h-16 bg-utama-100 text-utama-700 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">💻</div>
                     <h4 class="font-bold text-gray-800 text-sm">Nama Developer</h4>
                     <span class="text-xs text-gray-500">Pengembang Web</span>
                 </div>
                 <div class="p-4 bg-gray-50 rounded-lg border border-gray-100">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">👩‍🎓</div>
+                    <div class="w-16 h-16 bg-utama-100 text-utama-700 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">👩‍🎓</div>
                     <h4 class="font-bold text-gray-800 text-sm">Nama Anggota 1</h4>
                     <span class="text-xs text-gray-500">Sekretaris / Humas</span>
                 </div>
                 <div class="p-4 bg-gray-50 rounded-lg border border-gray-100">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">👨‍🎓</div>
+                    <div class="w-16 h-16 bg-utama-100 text-utama-700 rounded-full mx-auto flex items-center justify-center font-bold text-xl mb-2">👨‍🎓</div>
                     <h4 class="font-bold text-gray-800 text-sm">Nama Anggota 2</h4>
                     <span class="text-xs text-gray-500">Dokumentasi</span>
                 </div>
@@ -143,7 +152,7 @@
                                 <div class="w-12 h-12 ${item.warna} rounded-lg flex items-center justify-center font-bold text-xl mb-4">${item.ikon}</div>
                                 <h3 class="font-bold text-gray-800 text-lg mb-2">${item.judul}</h3>
                                 <p class="text-gray-600 text-sm leading-relaxed line-clamp-2">${item.singkat}</p>
-                                <span class="text-xs text-blue-600 font-semibold mt-4 inline-block">Baca Selengkapnya →</span>
+                                <span class="text-xs text-utama-600 font-semibold mt-4 inline-block">Baca Selengkapnya →</span>
                             </div>
                         `;
                     });
@@ -163,7 +172,7 @@
                                     <img src="${item.gambar}" alt="${item.judul}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<span class=\\'text-sm\\'>📷 ${item.judul}</span>'">
                                 </div>
                                 <div class="p-4 bg-white relative z-10">
-                                    <span class="text-xs text-blue-600 font-semibold">${item.tanggal}</span>
+                                    <span class="text-xs text-utama-600 font-semibold">${item.tanggal}</span>
                                     <h4 class="font-bold text-gray-800 mt-1">${item.judul}</h4>
                                     <p class="text-gray-500 text-xs mt-1 line-clamp-2">${item.deskripsi}</p>
                                 </div>

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UMKM Desa - Manik Maraja</title>
+    
+    <!-- Google Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,8 +35,13 @@
             }
         }
     </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen relative">
+<body class="bg-abu text-gelap flex flex-col min-h-screen relative">
     <div id="header-container"></div>
 
     <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
@@ -79,7 +90,7 @@
                 <div>
                     <p class="font-bold text-gray-800 mb-2">Lokasi di Peta:</p>
                     <iframe id="modalMap" class="w-full h-48 rounded-xl border border-gray-200 shadow-sm" allowfullscreen="" loading="lazy"></iframe>
-                    <a id="modalMapLink" href="#" target="_blank" class="text-blue-600 text-sm font-medium hover:underline mt-2 inline-flex items-center gap-1">
+                    <a id="modalMapLink" href="#" target="_blank" class="text-utama-600 text-sm font-medium hover:underline mt-2 inline-flex items-center gap-1">
                         Buka di Google Maps Lengkap →
                     </a>
                 </div>
@@ -124,7 +135,7 @@
                                     <span class="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">📷 ${item.gambar ? item.gambar.length : 0} Foto</span>
                                 </div>
                                 <div class="p-5 flex flex-col flex-grow">
-                                    <span class="bg-blue-100 text-blue-700 text-xs px-2.5 py-0.5 rounded-full font-semibold self-start">${item.kategori}</span>
+                                    <span class="bg-utama-100 text-utama-700 text-xs px-2.5 py-0.5 rounded-full font-semibold self-start">${item.kategori}</span>
                                     <h3 class="text-lg font-bold text-gray-800 mt-2">${item.namaUsaha}</h3>
                                     <p class="text-gray-600 text-sm mt-1 line-clamp-2">${item.deskripsi}</p>
                                     <div class="mt-4 pt-3 border-t text-xs text-gray-500 space-y-1 mt-auto">
@@ -132,7 +143,7 @@
                                         <p><strong>No. HP:</strong> ${item.nomorHp}</p>
                                     </div>
                                     <div class="mt-3">
-                                        <a href="${item.gmapsLink}" target="_blank" onclick="event.stopPropagation()" class="text-xs text-blue-600 hover:underline font-semibold flex items-center gap-1">
+                                        <a href="${item.gmapsLink}" target="_blank" onclick="event.stopPropagation()" class="text-xs text-utama-600 hover:underline font-semibold flex items-center gap-1">
                                             📍 Lihat Lokasi di Google Maps
                                         </a>
                                     </div>
@@ -174,7 +185,7 @@
                 zoomBtn.href = data.gambar[0];
                 data.gambar.forEach((imgUrl) => {
                     thumbContainer.innerHTML += `
-                        <img src="${imgUrl}" onclick="changeMainImage('${imgUrl}')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-blue-500 cursor-pointer flex-shrink-0 transition">
+                        <img src="${imgUrl}" onclick="changeMainImage('${imgUrl}')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-utama-500 cursor-pointer flex-shrink-0 transition">
                     `;
                 });
             } else {
