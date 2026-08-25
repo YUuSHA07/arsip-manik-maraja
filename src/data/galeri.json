@@ -30,5 +30,27 @@
     "deskripsi": "Kegiatan gotong royong membersihkan pekarangan fasilitas umum dan saluran air.",
     "gambar": "./assets/img/galeri-4.png",
     "kategori": "Lingkungan"
+  },
+  {
+    "id": "kegiatan-17an",
+    "judul": "Perayaan HUT RI ke-17 di Desa Manik Maraja",
+    "tanggal": "17 Agustus 2026",
+    "deskripsi": "Dokumentasi kemeriahan dan kebersamaan warga serta tim KKN dalam menyambut dan merayakan hari kemerdekaan.",
+    "gambar": "./assets/img/17an/bareng.JPG",
+    "kategori": "Nasionalisme",
+    "foto": [
+      "./assets/img/17an/pembukaan0.jpg",
+      "./assets/img/17an/pembukaan.jpg",
+      "./assets/img/17an/senam1.jpg",
+      "./assets/img/17an/senam2.jpg",
+      "./assets/img/17an/doa.jpg",
+      "./assets/img/17an/persiapan.png",
+      "./assets/img/17an/pesertalomba.jpg",
+      "./assets/img/17an/pesertalomba2.jpg",
+      "./assets/img/17an/lomba.jpg",
+      "./assets/img/17an/lomba2.jpg",
+      "./assets/img/17an/lomba3.jpg",
+      "./assets/img/17an/selesai.jpg"
+    ]
   }
 ]
