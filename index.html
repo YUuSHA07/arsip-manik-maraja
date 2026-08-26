@@ -51,8 +51,9 @@
 
     <div id="header-container" class="w-full z-50"></div>
 
-    <main class="flex-grow w-full">
+    <main class="flex-grow w-full space-y-12 pb-12">
 
+        <!-- Bagian Banner Slider -->
         <section class="w-full">
             <div class="relative w-full h-[85vh] md:h-[calc(100vh-68px)] overflow-hidden group bg-gray-900">
                 <img id="banner-img" src="" alt="Banner Desa Manik Maraja" class="absolute inset-0 w-full h-full object-cover opacity-80 banner-fade">
@@ -81,11 +82,119 @@
             </div>
         </section>
 
+ <!-- Bagian Statistik Kependudukan Dusun I -->
+        <section class="max-w-6xl mx-auto px-4 w-full py-6">
+            <!-- Header Section -->
+            <div class="mb-8 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-100 pb-4">
+                <div>
+                    <span class="inline-block bg-utama-100 text-utama-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-2">Demografi Wilayah</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight flex items-center justify-center md:justify-start gap-3">
+                        Statistik Kependudukan Dusun I
+                    </h2>
+                    <p class="text-gray-500 text-sm md:text-base mt-1">Gambaran umum demografi dan sebaran agama warga Dusun I Desa Manik Maraja.</p>
+                </div>
+            </div>
+
+            <!-- Grid Utama Statistik (Total, KK, Laki-laki, Perempuan) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Total Warga -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-utama-200 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-utama-50 rounded-full group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-14 h-14 bg-utama-100 text-utama-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-utama-500 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Total Warga</p>
+                            <h3 class="text-3xl font-black text-gray-800 mt-0.5 tracking-tight">606</h3>
+                            <span class="text-xs font-semibold text-utama-600 bg-utama-50 px-2 py-0.5 rounded-md inline-block mt-1">Jiwa Terdaftar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kepala Keluarga -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-50 rounded-full group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Kepala Keluarga</p>
+                            <h3 class="text-3xl font-black text-gray-800 mt-0.5 tracking-tight">178</h3>
+                            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md inline-block mt-1">KK Terdata</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laki-Laki -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-sky-200 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-sky-50 rounded-full group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Laki-Laki</p>
+                            <h3 class="text-3xl font-black text-gray-800 mt-0.5 tracking-tight">303</h3>
+                            <span class="text-xs font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-md inline-block mt-1">Jiwa (50%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perempuan -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-rose-200 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-rose-50 rounded-full group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H9m6 0a3 3 0 003-3v-1a5 5 0 00-10 0v1a3 3 0 003 3m6 0v-1a3 3 0 00-3-3m0 0h-3m3 0V9a3 3 0 00-3-3m0 0V4a3 3 0 013-3h0a3 3 0 013 3v1"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Perempuan</p>
+                            <h3 class="text-3xl font-black text-gray-800 mt-0.5 tracking-tight">303</h3>
+                            <span class="text-xs font-semibold text-rose-600 bg-rose-50 px-2 py-0.5 rounded-md inline-block mt-1">Jiwa (50%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sebaran Agama (Warga Islam & Kristen) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                <!-- Warga Islam -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-200 transition-all duration-300 flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Warga Islam</p>
+                            <h3 class="text-3xl font-black text-gray-800 mt-0.5 tracking-tight">597 <span class="text-sm font-normal text-gray-500">Jiwa</span></h3>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200">Mayoritas (98.5%)</span>
+                </div>
+
+                <!-- Warga Kristen -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Warga Kristen</p>
+                            <h3 class="text-3xl font-black text-gray-800 mt-0.5 tracking-tight">9 <span class="text-sm font-normal text-gray-500">Jiwa</span></h3>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-purple-700 bg-purple-50 px-3 py-1.5 rounded-xl border border-purple-200">Minoritas (1.5%)</span>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div id="footer-container"></div>
 
-<script>
+    <script>
         let bannerList = [];
         let currentIndex = 0;
         let slideInterval;
