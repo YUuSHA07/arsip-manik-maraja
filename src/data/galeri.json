@@ -1,35 +1,116 @@
 [
-  {
-    "id": "sosialisasi-web",
-    "judul": "Sosialisasi Website Desa",
-    "tanggal": "10 Agustus 2026",
-    "deskripsi": "Pemaparan penggunaan website arsip desa bersama perangkat desa Manik Maraja di balai desa.",
-    "gambar": "./assets/img/galeri-1.png",
-    "kategori": "Program Kerja"
+{
+    "id": "keberangkatan",
+    "judul": "Keberangkatan KKN Desa Manik Maraja",
+    "tanggal": "29 Juli 2026",
+    "deskripsi": "Dokumentasi pelepasan dan momen kebersamaan tim mahasiswa KKN UINSU sebelum berangkat menuju lokasi pengabdian di Desa Manik Maraja.",
+    "gambar": "./assets/img/Galeri/keberangkatan/cover.jpg",
+    "kategori": "Keberangkatan",
+    "foto": [
+      "./assets/img/Galeri/keberangkatan/keberangkatan (4).jpg",
+      "./assets/img/Galeri/keberangkatan/keberangkatan (6).jpg",
+      "./assets/img/Galeri/keberangkatan/keberangkatan (7).jpg",
+      "./assets/img/Galeri/keberangkatan/keberangkatan (8).jpg",
+      "./assets/img/Galeri/keberangkatan/keberangkatan (11).jpg",
+      "./assets/img/Galeri/keberangkatan/keberangkatan (28).jpg"
+    ]
   },
   {
-    "id": "pendataan-umkm",
-    "judul": "Kunjungan ke Pelaku UMKM",
-    "tanggal": "12 Agustus 2026",
-    "deskripsi": "Proses pendataan dan wawancara dengan pemilik usaha lokal warga desa.",
-    "gambar": "./assets/img/galeri-2.png",
-    "kategori": "UMKM"
+    "id": "gotong-royong-bupati",
+    "judul": "Gotong Royong Penyambutan Bupati Sidamanik",
+    "tanggal": "29 Juli 2026",
+    "deskripsi": "Kegiatan gotong royong bersama warga dan perangkat Desa Manik Maraja untuk membersihkan serta mempersiapkan penyambutan kunjungan kerja Bupati Sidamanik di desa.",
+    "gambar": "./assets/img/Galeri/gotongroyong/penyambutan (14).jpg",
+    "kategori": "Gotong Royong",
+    "foto": [
+      "./assets/img/Galeri/gotongroyong/penyambutan (7).jpg",
+      "./assets/img/Galeri/gotongroyong/penyambutan (12).jpg",
+      "./assets/img/Galeri/gotongroyong/penyambutan (14).jpg",
+      "./assets/img/Galeri/gotongroyong/penyambutan (18).jpg",
+      "./assets/img/Galeri/gotongroyong/penyambutan (23).jpg",
+      "./assets/img/Galeri/gotongroyong/penyambutan (45).jpg",
+      "./assets/img/gotongroyong/penyambutan (80).jpg"
+    ]
+  },
+{
+    "id": "kunjungan-bupati-simalungun",
+    "judul": "Penyambutan Kunjungan Kerja Bupati Simalungun",
+    "tanggal": "30 Juli 2026",
+    "deskripsi": "Dokumentasi penyambutan resmi serta rangkaian kegiatan kunjungan kerja Bupati Simalungun di Desa Manik Maraja bersama warga dan tim KKN.",
+    "gambar": "./assets/img/Galeri/penyambutan/penyambutan (1).jpg",
+    "kategori": "Kunjungan Kerja",
+    "foto": [
+      "./assets/img/Galeri/penyambutan/penyambutan (1).jpg",
+      "./assets/img/Galeri/penyambutan/penyambutan (2).jpg",
+      "./assets/img/Galeri/penyambutan/penyambutan (3).jpg",
+      "./assets/img/Galeri/penyambutan/penyambutan (4).jpg"
+    ]
   },
   {
-    "id": "posyandu",
-    "judul": "Bantuan Layanan Posyandu",
-    "tanggal": "18 Agustus 2026",
-    "deskripsi": "Membantu kader posyandu dalam melakukan penimbangan balita dan pengecekan kesehatan lansia.",
-    "gambar": "./assets/img/galeri-3.png",
-    "kategori": "Kesehatan"
+    "id": "pembukaan-kkn",
+    "judul": "Pembukaan dan Penyambutan KKN Desa Manik Maraja",
+    "tanggal": "31 Juli 2026",
+    "deskripsi": "Dokumentasi acara seremoni pembukaan serta penyambutan resmi mahasiswa Kuliah Kerja Nyata (KKN) oleh perangkat desa dan warga setempat di Desa Manik Maraja.",
+    "gambar": "./assets/img/Galeri/pembukaan/pembukaan (6).jpg",
+    "kategori": "Pembukaan",
+    "foto": [
+      "./assets/img/Galeri/pembukaan/pembukaan (1).jpg",
+      "./assets/img/Galeri/pembukaan/pembukaan (2).jpg",
+      "./assets/img/Galeri/pembukaan/pembukaan (3).jpg",
+      "./assets/img/Galeri/pembukaan/pembukaan (4).jpg",
+      "./assets/img/Galeri/pembukaan/pembukaan (5).jpg",
+      "./assets/img/Galeri/pembukaan/pembukaan (6).jpg"
+    ]
   },
   {
-    "id": "gotong-royong",
-    "judul": "Jumat Bersih Bersama Warga",
-    "tanggal": "20 Agustus 2026",
-    "deskripsi": "Kegiatan gotong royong membersihkan pekarangan fasilitas umum dan saluran air.",
-    "gambar": "./assets/img/galeri-4.png",
-    "kategori": "Lingkungan"
+    "id": "koordinasi-sekdes",
+    "judul": "Koordinasi Program Kerja dengan Sekdes",
+    "tanggal": "01 Agustus 2026",
+    "deskripsi": "Kegiatan diskusi dan koordinasi awal bersama Sekretaris Desa Manik Maraja terkait rencana pelaksanaan program kerja (Proker) tim mahasiswa KKN selama masa pengabdian.",
+    "gambar": "./assets/img/Galeri/koordinasi/koordinasi (1).jpg",
+    "kategori": "Koordinasi",
+    "foto": [
+      "./assets/img/Galeri/koordinasi/koordinasi (1).jpg",
+      "./assets/img/Galeri/koordinasi/koordinasi (2).jpg",
+      "./assets/img/Galeri/koordinasi/koordinasi (3).jpg",
+      "./assets/img/Galeri/koordinasi/koordinasi (4).jpg",
+      "./assets/img/Galeri/koordinasi/koordinasi (5).jpg",
+      "./assets/img/Galeri/koordinasi/koordinasi (6).jpg"
+    ]
+  },
+  {
+    "id": "kegiatan-senam",
+    "judul": "Kegiatan Senam Sehat Bersama Warga Desa Manik Maraja",
+    "tanggal": "02 Agustus 2026",
+    "deskripsi": "Dokumentasi kemeriahan dan kekompakan kegiatan senam sehat bersama warga setempat dan tim KKN di Desa Manik Maraja.",
+    "gambar": "./assets/img/Galeri/senam/senam (1).jpg",
+    "kategori": "Kesehatan",
+    "foto": [
+      "./assets/img/Galeri/senam/senam (1).jpg",
+      "./assets/img/Galeri/senam/senam (2).jpg",
+      "./assets/img/Galeri/senam/senam (3).jpg",
+      "./assets/img/Galeri/senam/senam (4).jpg",
+      "./assets/img/Galeri/senam/senam (5).jpg",
+      "./assets/img/Galeri/senam/senam (6).jpg",
+      "./assets/img/Galeri/senam/senam (7).jpg",
+      "./assets/img/Galeri/senam/senam (8).jpg",
+      "./assets/img/Galeri/senam/senam (9).jpg",
+      "./assets/img/Galeri/senam/senam (10).jpg"
+    ]
+  },
+  {
+    "id": "wisata-kebun-teh-pemandian",
+    "judul": "Wisata Kebun Teh & Pemandian Bah Damanik",
+    "tanggal": "01 - 02 Agustus 2026",
+    "deskripsi": "Dokumentasi kegiatan rekreasi dan kunjungan wisata tim mahasiswa KKN ke pesona keindahan Kebun Teh serta kejernihan air di Pemandian Bah Damanik.",
+    "gambar": "./assets/img/Galeri/wisata/wisata (1).jpg",
+    "kategori": "Wisata",
+    "foto": [
+      "./assets/img/Galeri/wisata/wisata (1).jpg",
+      "./assets/img/Galeri/wisata/wisata (2).jpg",
+      "./assets/img/Galeri/wisata/wisata (3).jpg",
+      "./assets/img/Galeri/wisata/wisata (4).jpg"
+    ]
   },
   {
     "id": "kegiatan-17an",
@@ -39,18 +120,18 @@
     "gambar": "./assets/img/17an/bareng.JPG",
     "kategori": "Nasionalisme",
     "foto": [
-      "./assets/img/17an/pembukaan0.jpg",
-      "./assets/img/17an/pembukaan.jpg",
-      "./assets/img/17an/senam1.jpg",
-      "./assets/img/17an/senam2.jpg",
-      "./assets/img/17an/doa.jpg",
-      "./assets/img/17an/persiapan.png",
-      "./assets/img/17an/pesertalomba.jpg",
-      "./assets/img/17an/pesertalomba2.jpg",
-      "./assets/img/17an/lomba.jpg",
-      "./assets/img/17an/lomba2.jpg",
-      "./assets/img/17an/lomba3.jpg",
-      "./assets/img/17an/selesai.jpg"
+      "./assets/img/Galeri/17an/pembukaan0.jpg",
+      "./assets/img/Galeri/17an/pembukaan.jpg",
+      "./assets/img/Galeri/17an/senam1.jpg",
+      "./assets/img/Galeri/17an/senam2.jpg",
+      "./assets/img/Galeri/17an/doa.jpg",
+      "./assets/img/Galeri/17an/persiapan.png",
+      "./assets/img/Galeri/17an/pesertalomba.jpg",
+      "./assets/img/Galeri/17an/pesertalomba2.jpg",
+      "./assets/img/Galeri/17an/lomba.jpg",
+      "./assets/img/Galeri/17an/lomba2.jpg",
+      "./assets/img/Galeri/17an/lomba3.jpg",
+      "./assets/img/Galeri/17an/selesai.jpg"
     ]
   }
 ]
