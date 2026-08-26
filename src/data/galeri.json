@@ -75,7 +75,9 @@
       "./assets/img/Galeri/koordinasi/koordinasi (3).jpg",
       "./assets/img/Galeri/koordinasi/koordinasi (4).jpg",
       "./assets/img/Galeri/koordinasi/koordinasi (5).jpg",
-      "./assets/img/Galeri/koordinasi/koordinasi (6).jpg"
+      "./assets/img/Galeri/koordinasi/koordinasi (6).jpg",
+      "./assets/img/Galeri/koordinasi/IMG20260803122208.jpg",
+      "./assets/img/Galeri/koordinasi/IMG20260803121735.jpg"
     ]
   },
   {
@@ -103,21 +105,40 @@
     "judul": "Wisata Kebun Teh & Pemandian Bah Damanik",
     "tanggal": "01 - 02 Agustus 2026",
     "deskripsi": "Dokumentasi kegiatan rekreasi dan kunjungan wisata tim mahasiswa KKN ke pesona keindahan Kebun Teh serta kejernihan air di Pemandian Bah Damanik.",
-    "gambar": "./assets/img/Galeri/wisata/wisata (1).jpg",
+    "gambar": "./assets/img/Galeri/wisata/wisata (2).jpg",
     "kategori": "Wisata",
     "foto": [
       "./assets/img/Galeri/wisata/wisata (1).jpg",
       "./assets/img/Galeri/wisata/wisata (2).jpg",
       "./assets/img/Galeri/wisata/wisata (3).jpg",
-      "./assets/img/Galeri/wisata/wisata (4).jpg"
+      "./assets/img/Galeri/wisata/wisata (4).jpg",
+      "./assets/img/Galeri/wisata/wisata (5).jpg",
+      "./assets/img/Galeri/wisata/wisata (6).jpg"
     ]
   },
+  {
+    "id": "rapat-koordinasi-dusun-lain",
+    "judul": "Rapat Koordinasi Rangkaian Kegiatan Bersama KKN Dusun Lain",
+    "tanggal": "5 Agustus 2026",
+    "deskripsi": "Dokumentasi kegiatan rapat koordinasi dan sinkronisasi jadwal rangkaian kegiatan bersama kelompok mahasiswa KKN dari dusun atau desa lain untuk mempererat sinergi program pengabdian.",
+    "gambar": "./assets/img/Galeri/rapat/rapat (4).jpg",
+    "kategori": "Koordinasi",
+    "foto": [
+      "./assets/img/Galeri/rapat/rapat (1).jpg",
+      "./assets/img/Galeri/rapat/rapat (2).jpg",
+      "./assets/img/Galeri/rapat/rapat (3).jpg",
+      "./assets/img/Galeri/rapat/rapat (4).jpg",
+      "./assets/img/Galeri/rapat/rapat (5).jpg",
+      "./assets/img/Galeri/rapat/rapat (6).jpg"
+    ]
+  },
+
   {
     "id": "kegiatan-17an",
     "judul": "Perayaan HUT RI ke-17 di Desa Manik Maraja",
     "tanggal": "17 Agustus 2026",
     "deskripsi": "Dokumentasi kemeriahan dan kebersamaan warga serta tim KKN dalam menyambut dan merayakan hari kemerdekaan.",
-    "gambar": "./assets/img/17an/bareng.JPG",
+    "gambar": "./assets/img/Galeri/17an/bareng.JPG",
     "kategori": "Nasionalisme",
     "foto": [
       "./assets/img/Galeri/17an/pembukaan0.jpg",
