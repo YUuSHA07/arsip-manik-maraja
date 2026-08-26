@@ -85,32 +85,108 @@
 
     <div id="footer-container"></div>
 
-    <script>
-        const bannerList = [
-            {
-                gambar: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1920&auto=format&fit=crop",
-                badge: "Desa Manik Maraja",
-                judul: "Selamat Datang di Portal Desa Manik Maraja",
-                subjudul: "Pusat Pelayanan Publik, Pengelolaan Arsip Digital, dan Informasi Transparan Desa."
-            },
-            {
-                gambar: "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?q=80&w=1920&auto=format&fit=crop",
-                badge: "Potensi Desa",
-                judul: "Mendukung Kemajuan UMKM Warga",
-                subjudul: "Pemberdayaan ekonomi masyarakat melalui produk unggulan lokal khas Manik Maraja."
-            },
-            {
-                gambar: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1920&auto=format&fit=crop",
-                badge: "Pengabdian Masyarakat",
-                judul: "Sinergi KKN Desa Manik Maraja",
-                subjudul: "Mewujudkan tata kelola arsip dan pangkalan data desa berbasis digital."
-            }
-        ];
-
+<script>
+        let bannerList = [];
         let currentIndex = 0;
         let slideInterval;
 
+        // Fungsi untuk mengacak array secara random
+        function shuffleArray(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex != 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
+        async function loadUmkmBanners() {
+            // Daftar lengkap foto UMKM beserta teks khusus untuk masing-masing usaha
+            let umkmDataPool = [
+                {
+                    gambar: "./assets/img/UMKM/bibi-pangkas/bibi-pangkas1.jpg",
+                    judul: "Pangkas Rambut Tradisional Bibi Pangkas",
+                    subjudul: "Layanan potong rambut harian terpercaya untuk warga lokal dengan hasil rapi dan memuaskan."
+                },
+                {
+                    gambar: "./assets/img/UMKM/dj-residence/dj-residence1.jpg",
+                    judul: "Penginapan Nyaman DJ Residence",
+                    subjudul: "Fasilitas akomodasi bersih dan strategis bagi pendatang serta tamu yang berkunjung ke desa."
+                },
+                {
+                    gambar: "./assets/img/UMKM/erp-repair/erp-repair2.jpg",
+                    judul: "Jasa Servis & Perbaikan Elektronik ERP Repair",
+                    subjudul: "Solusi cepat dan handal untuk perbaikan berbagai peralatan elektronik rumah tangga."
+                },
+                {
+                    gambar: "./assets/img/UMKM/jahit-dian/jahit-dian1.jpg",
+                    judul: "Konveksi & Jahitan Pakaian Jahit Dian",
+                    subjudul: "Menerima pembuatan pakaian, seragam, dan jasa perbaikan busana dengan jahitan berkualitas."
+                },
+                {
+                    gambar: "./assets/img/UMKM/jaka-bengkel/jaka-bengkel1.jpg",
+                    judul: "Bengkel Motor Jaka",
+                    subjudul: "Layanan servis rutin, tambal ban, dan perbaikan kendaraan bermotor warga."
+                },
+                {
+                    gambar: "./assets/img/UMKM/masif-es-kristal/masif1.jpg",
+                    judul: "Pabrik Es Kristal Masif",
+                    subjudul: "Penyedia kebutuhan es kristal higienis untuk warung makan, kafe, dan acara warga."
+                },
+                {
+                    gambar: "./assets/img/UMKM/mie-balap-bang-doyok/mie-balap-bang-doyok1.jpg",
+                    judul: "Kuliner Lezat Mie Balap Bang Doyok",
+                    subjudul: "Nikmati kelezatan kuliner khas mie balap favorit dengan cita rasa gurih yang menggugah selera."
+                },
+                {
+                    gambar: "./assets/img/UMKM/pangkas-sl/pangkas-sl1.jpg",
+                    judul: "Barbershop & Pangkas SL",
+                    subjudul: "Model potongan rambut modern dan kekinian untuk kalangan anak muda hingga dewasa."
+                },
+                {
+                    gambar: "./assets/img/UMKM/sate-padang/sate-padang1.jpg",
+                    judul: "Kuliner Malam Sate Padang",
+                    subjudul: "Sate Padang berempah khas dengan kuah kental yang lezat di lidah."
+                },
+                {
+                    gambar: "./assets/img/UMKM/wak-atik/wak-atik1.jpg",
+                    judul: "Warung Harian Wak Atik",
+                    subjudul: "Menyediakan berbagai kebutuhan pokok dan sembako sehari-hari bagi warga desa."
+                },
+                {
+                    gambar: "./assets/img/UMKM/warung-bibi-pangkas/warung-bibi-pangkas1.jpg",
+                    judul: "Warung Kelontong Bibi Pangkas",
+                    subjudul: "Tempat berbelanja kebutuhan rumah tangga yang lengkap dan ramah di lingkungan desa."
+                },
+                {
+                    gambar: "./assets/img/UMKM/warung-plastik/warung-plastik1.jpg",
+                    judul: "Grosir Plastik & Keperluan Usaha",
+                    subjudul: "Pusat pasokan kemasan plastik dan perlengkapan jualan bagi para pedagang lokal."
+                }
+            ];
+
+            // Acak urutan data UMKM secara random setiap halaman direfresh
+            shuffleArray(umkmDataPool);
+
+            // Ambil 4 data teratas yang sudah diacak untuk dijadikan 4 slide berbeda
+            const selectedBanners = umkmDataPool.slice(0, 4);
+
+            bannerList = selectedBanners.map(item => ({
+                gambar: item.gambar,
+                badge: "Potensi UMKM Desa",
+                judul: item.judul,
+                subjudul: item.subjudul
+            }));
+
+            if (bannerList.length > 0) {
+                updateSlide(0);
+                startAutoSlide();
+            }
+        }
+
         function updateSlide(index) {
+            if (bannerList.length === 0) return;
             currentIndex = index;
             const data = bannerList[currentIndex];
 
@@ -133,18 +209,19 @@
 
         function renderDots() {
             const dotsContainer = document.getElementById('dots-container');
-            // Titik indikator aktif menggunakan warna hijau matcha (bg-utama-500)
             dotsContainer.innerHTML = bannerList.map((_, i) => `
                 <button onclick="goToSlide(${i})" class="h-3 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-utama-500 w-10' : 'bg-white/60 hover:bg-white w-3'}"></button>
             `).join('');
         }
 
         function nextSlide() {
+            if (bannerList.length === 0) return;
             const next = (currentIndex + 1) % bannerList.length;
             updateSlide(next);
         }
 
         function prevSlide() {
+            if (bannerList.length === 0) return;
             const prev = (currentIndex - 1 + bannerList.length) % bannerList.length;
             updateSlide(prev);
         }
@@ -155,6 +232,7 @@
         }
 
         function startAutoSlide() {
+            clearInterval(slideInterval);
             slideInterval = setInterval(nextSlide, 6000);
         }
 
@@ -164,8 +242,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            updateSlide(0);
-            startAutoSlide();
+            loadUmkmBanners();
 
             document.getElementById('next-slide').addEventListener('click', () => {
                 nextSlide();
