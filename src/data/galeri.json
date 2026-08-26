@@ -28,8 +28,7 @@
       "./assets/img/Galeri/gotongroyong/penyambutan (14).jpg",
       "./assets/img/Galeri/gotongroyong/penyambutan (18).jpg",
       "./assets/img/Galeri/gotongroyong/penyambutan (23).jpg",
-      "./assets/img/Galeri/gotongroyong/penyambutan (45).jpg",
-      "./assets/img/gotongroyong/penyambutan (80).jpg"
+      "./assets/img/Galeri/gotongroyong/penyambutan (45).jpg"
     ]
   },
 {
@@ -132,7 +131,19 @@
       "./assets/img/Galeri/rapat/rapat (6).jpg"
     ]
   },
-
+  {
+    "id": "mengajar-mis-an-nur",
+    "judul": "Kegiatan Mengajar di MIS AN NUR",
+    "tanggal": "05 - 18 Agustus 2026",
+    "deskripsi": "Dokumentasi kegiatan pengabdian tim mahasiswa KKN dalam membantu proses belajar mengajar serta berbagi ilmu bersama anak-anak di MIS AN NUR.",
+    "gambar": "./assets/img/Galeri/mengajar/20260806_081113.jpg",
+    "kategori": "Pendidikan",
+    "foto": [
+      "./assets/img/Galeri/mengajar/20260806_074009.jpg",
+      "./assets/img/Galeri/mengajar/20260806_081113.jpg",
+      "./assets/img/Galeri/mengajar/20260806_113329.jpg"
+    ]
+  },
   {
     "id": "kegiatan-17an",
     "judul": "Perayaan HUT RI ke-17 di Desa Manik Maraja",
