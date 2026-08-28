@@ -191,9 +191,65 @@
             </div>
         </section>
 
+        <!-- Section Liputan & Artikel Berita Eksternal -->
+        <section class="max-w-6xl mx-auto px-4 w-full py-10">
+            <div class="mb-8 border-l-4 border-utama-500 pl-4">
+                <span class="inline-block bg-utama-100 text-utama-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-1">Media & Publikasi</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Liputan & Artikel Terkait KKN</h2>
+                <p class="text-gray-500 text-sm mt-1">Berita dan sorotan media mengenai kegiatan pengabdian di Desa Manik Maraja.</p>
+            </div>
+
+            <!-- Kontainer Kosong yang nantinya diisi otomatis oleh JavaScript -->
+            <div id="artikel-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Data dari artikel.json akan masuk secara otomatis ke sini -->
+            </div>
+        </section>
+
     </main>
 
     <div id="footer-container"></div>
+
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mengambil data dari file artikel.json
+            fetch('./src/data/artikel.json')
+                .then(res => res.json())
+                .then(artikelData => {
+                    const artikelContainer = document.getElementById('artikel-container');
+                    artikelContainer.innerHTML = '';
+                    
+                    artikelData.forEach(item => {
+                        artikelContainer.innerHTML += `
+                            <article class="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-utama-200 transition-all duration-300 flex flex-col group">
+                                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                                    <img src="${item.gambar}" alt="${item.judul}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop'">
+                                    <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                                        ${item.media}
+                                    </span>
+                                </div>
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-2">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        <span>${item.tanggal}</span>
+                                    </div>
+                                    <h3 class="font-bold text-gray-800 text-base mb-2 group-hover:text-utama-600 transition-colors line-clamp-2">
+                                        ${item.judul}
+                                    </h3>
+                                    <p class="text-gray-500 text-xs leading-relaxed mb-6 line-clamp-3">
+                                        ${item.ringkasan}
+                                    </p>
+                                    <a href="${item.link}" target="_blank" class="mt-auto inline-flex items-center justify-center gap-2 w-full bg-utama-50 text-utama-700 hover:bg-utama-500 hover:text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-colors">
+                                        Baca Berita Lengkap
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </article>
+                        `;
+                    });
+                })
+                .catch(err => console.error('Gagal memuat artikel.json:', err));
+        });
+    </script>
 
     <script>
         let bannerList = [];
