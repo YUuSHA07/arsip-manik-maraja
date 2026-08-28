@@ -56,7 +56,7 @@
         <!-- KONTEN PETA -->
         <div class="grid grid-cols-1 gap-10 mb-12">
             
-            <!-- Peta 0: Peta Huta 1 Manik Maraja (PNG Full Lebar & Panjang Proporsional) -->
+            <!-- Peta 0: Peta Huta 1 Manik Maraja -->
             <div class="bg-white rounded-3xl p-6 md:p-8 border border-gray-200 hover:border-utama-500 hover:shadow-xl hover:shadow-utama-500/10 transition-all duration-300 flex flex-col">
                 <div class="flex items-center gap-3 mb-5">
                     <div class="w-12 h-12 rounded-xl bg-utama-50 text-utama-600 flex items-center justify-center text-2xl">
@@ -68,10 +68,48 @@
                     </div>
                 </div>
 
-                <!-- Kontainer Bingkai dengan Lebar Penuh (w-full) dan Panjang/Tinggi Otomatis Menyesuaikan Tanpa Terpotong -->
-                <div class="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-inner bg-gray-50 relative group p-2">
+                <!-- Kontainer Bingkai Gambar Peta -->
+                <div class="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-inner bg-gray-50 relative group p-2 mb-6">
                     <img src="assets/img/peta/peta-huta1.jpg" alt="Peta Huta 1 Manik Maraja" class="w-full h-auto object-contain rounded-xl" onerror="this.src='https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop'">
                 </div>
+
+                <!-- Section Baru: Informasi Luas Wilayah (Hasil Kalibrasi Peta) -->
+                <div class="bg-gradient-to-br from-utama-50 to-white rounded-2xl p-6 border border-utama-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-utama-500 text-white flex items-center justify-center shadow-md">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base">Hasil Pengukuran & Kalibrasi Wilayah Huta I</h4>
+                            <p class="text-xs text-gray-500">Berdasarkan pengukuran ulang seluruh poligon batas wilayah pada peta.</p>
+                        </div>
+                    </div>
+
+                    <!-- Grid Detail Satuan Luas -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-xl border border-utama-100 shadow-xs text-center">
+                            <span class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Meter Persegi</span>
+                            <span class="text-lg font-black text-gray-800">≈ 102.000 m²</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-utama-100 shadow-xs text-center">
+                            <span class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Hektare</span>
+                            <span class="text-lg font-black text-utama-700">10,20 ha</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-utama-100 shadow-xs text-center">
+                            <span class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Kilometer Persegi</span>
+                            <span class="text-lg font-black text-gray-800">≈ 0,102 km²</span>
+                        </div>
+                    </div>
+
+                    <!-- Catatan Koreksi Penting -->
+                    <div class="bg-amber-50 border-l-4 border-amber-400 p-3.5 rounded-r-xl text-xs text-amber-900 leading-relaxed flex items-start gap-2.5">
+                        <svg class="w-4 h-4 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <strong>Catatan Kalibrasi:</strong> Hasil pengukuran ulang berdasarkan poligon batas wilayah pada peta menunjukkan estimasi luas total wilayah Huta I sebesar ±10.202 m² (10,20 hektare).</strong>.
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Peta 1: Wilayah Desa -->
@@ -121,7 +159,7 @@
                     <div class="absolute inset-0 bg-utama-500/5 pointer-events-none group-hover:bg-transparent transition-colors duration-300"></div>
                     <iframe 
                         class="w-full h-full border-0"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8267547556597!2d98.91275849651697!3d2.8663204980055426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197002fe5fce7%3A0x90b5f13fe990f044!2sKantor%20Pangulu%20Nagori%20Manik%20Maraja!5e0!3m2!1sid!2sid!4v1786704706644!5m2!1sid!2sid" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8267547556597!2d98.91275849651697!3d2.8663204980055426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303197002fe5fce7%3A0x90b5f13fe990f044!2sKantor%20Pangulu%20Nagori%20Manik+Maraja!5e0!3m2!1sid!2sid!4v1786704706644!5m2!1sid!2sid" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
