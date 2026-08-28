@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarki Perangkat Desa - Nagori Manik Maraja</title>
+    
+    <!-- Google Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        utama: {
+                            50: '#f6f9f2',
+                            100: '#e9f2df',
+                            200: '#d1e4be',
+                            500: '#74A12E', /* Base Color Matcha */
+                            600: '#5a8022',
+                            700: '#46631d',
+                            900: '#23330e',
+                        },
+                        gelap: '#111827',
+                        abu: '#F9FAFB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-abu text-gelap flex flex-col min-h-screen relative">
+    
+    <!-- Header dari module -->
+    <div id="header-container" class="w-full z-50"></div>
+
+    <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full space-y-10">
+
+        <!-- Judul Section -->
+        <div class="pl-4 border-l-4 border-utama-500 mb-8 mt-4">
+            <span class="inline-block bg-utama-100 text-utama-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-2">Struktur Pemerintahan</span>
+            <h2 class="text-3xl font-extrabold text-gray-900">Hierarki Perangkat Nagori Manik Maraja</h2>
+            <p class="text-gray-500 mt-2 font-medium">Susunan aparatur pemerintahan desa dan kepala dusun (gamot) yang bertugas.</p>
+        </div>
+
+        <!-- Kartu Utama Pimpinan (Pangulu & Sekretaris) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Pangulu -->
+            <div class="bg-gradient-to-br from-utama-600 to-utama-800 text-white p-6 md:p-8 rounded-3xl shadow-lg flex items-center gap-5 relative overflow-hidden">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shrink-0 backdrop-blur-sm">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-utama-200">Pangulu (Kepala Desa)</span>
+                    <h3 class="text-2xl md:text-3xl font-black mt-0.5">Suriono</h3>
+                    <span class="text-xs text-white/80 mt-1 block">Pimpinan Pemerintahan Nagori</span>
+                </div>
+            </div>
+
+            <!-- Sekretaris Desa -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow">
+                <div class="w-16 h-16 bg-utama-50 text-utama-600 rounded-2xl flex items-center justify-center shrink-0">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Sekretaris Nagori</span>
+                    <h3 class="text-2xl md:text-3xl font-black text-gray-800 mt-0.5">Eko Sugandi</h3>
+                    <span class="text-xs text-gray-500 mt-1 block">Administrasi & Kesekretariatan</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Kasi (Kepala Seksi) -->
+        <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-extrabold text-gray-900 mb-6 flex items-center gap-3">
+                <span class="w-3 h-3 rounded-full bg-utama-500"></span> Kepala Seksi (Kasi)
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Kasi Pemerintahan -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-utama-700 uppercase tracking-wider block mb-1">Kasi Pemerintahan</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Heri Susanto</h4>
+                </div>
+                <!-- Kasi Ekonomi & Pembangunan -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-utama-700 uppercase tracking-wider block mb-1">Kasi Ekonomi & Pembangunan</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Suhendri</h4>
+                </div>
+                <!-- Kasi Keuangan -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-utama-700 uppercase tracking-wider block mb-1">Kasi Keuangan</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Dewi Siska Agustina</h4>
+                </div>
+                <!-- Kasi Umum & Perencanaan -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-utama-700 uppercase tracking-wider block mb-1">Kasi Umum & Perencanaan</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Adelin Bahari</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Gamot (Kepala Dusun / Huta) -->
+        <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-extrabold text-gray-900 mb-6 flex items-center gap-3">
+                <span class="w-3 h-3 rounded-full bg-utama-500"></span> Para Gamot (Kepala Dusun / Huta)
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                <!-- Gamot Huta 1 -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Gamot Huta I</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Juli</h4>
+                </div>
+                <!-- Gamot Huta 2 -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Gamot Huta II</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Ari Gunawan</h4>
+                </div>
+                <!-- Gamot Huta 3 -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Gamot Huta III</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Jumari</h4>
+                </div>
+                <!-- Gamot Huta 4 -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition">
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Gamot Huta IV</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Paiman</h4>
+                </div>
+                <!-- Gamot Huta 5 -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:border-utama-200 transition sm:col-span-2 lg:col-span-1">
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Gamot Huta V</span>
+                    <h4 class="text-base font-extrabold text-gray-800">Juneidi</h4>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer dari module -->
+    <div id="footer-container"></div>
+
+    <script type="module">
+        import { renderHeader, initHeaderEvents } from './src/components/Header.js';
+        import { renderFooter } from './src/components/Footer.js';
+
+        // Panggil renderHeader dengan parameter 'profil' agar menu Profil Desa aktif/highlight
+        document.getElementById('header-container').innerHTML = renderHeader('profil');
+        document.getElementById('footer-container').innerHTML = renderFooter();
+        initHeaderEvents();
+    </script>
+</body>
+</html>
