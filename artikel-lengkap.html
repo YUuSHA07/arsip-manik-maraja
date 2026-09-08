@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liputan & Artikel KKN - Desa Manik Maraja</title>
+    
+    <!-- Google Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        utama: {
+                            50: '#f6f9f2',
+                            100: '#e9f2df',
+                            200: '#d1e4be',
+                            500: '#74A12E', /* Base Color Matcha */
+                            600: '#5a8022',
+                            700: '#46631d',
+                            900: '#23330e',
+                        },
+                        gelap: '#111827',
+                        abu: '#F9FAFB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-abu text-gelap flex flex-col min-h-screen">
+    <div id="header-container"></div>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+        <div class="mb-6">
+            <a href="galeri-kkn.html" class="inline-flex items-center text-sm font-semibold text-utama-700 hover:text-utama-800 transition bg-utama-50 px-4 py-2 rounded-lg border border-utama-200">
+                ← Kembali ke Halaman KKN
+            </a>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 border-b pb-6">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-800 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-utama-100 text-utama-600 flex items-center justify-center">
+                        <!-- Ikon Berita / Dokumen -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                    </span>
+                    Liputan & Artikel KKN Lengkap
+                </h1>
+                <p class="text-gray-600 mt-1 text-sm">Kumpulan berita, sorotan media, dan artikel lengkap mengenai kegiatan pengabdian mahasiswa di Desa Manik Maraja.</p>
+            </div>
+            <div class="w-full md:w-72">
+                <input type="text" id="search-input" placeholder="Cari judul artikel..." class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-utama-500 text-sm shadow-sm">
+            </div>
+        </div>
+
+        <div id="artikel-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="col-span-full text-center py-12 text-gray-500 animate-pulse">
+                Memuat daftar artikel...
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>
+        let allArtikel = [];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById('artikel-grid');
+            const searchInput = document.getElementById('search-input');
+
+            // Fetch data dari artikel.json
+            fetch('./src/data/artikel.json')
+                .then(res => res.json())
+                .then(data => {
+                    allArtikel = data;
+                    renderArtikel(allArtikel);
+                })
+                .catch(err => {
+                    console.error(err);
+                    grid.innerHTML = `<div class="col-span-full text-center py-12 text-red-500">Gagal memuat data artikel.</div>`;
+                });
+
+            // Event listener pencarian interaktif
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const filtered = allArtikel.filter(item => 
+                    item.judul.toLowerCase().includes(query) || 
+                    item.ringkasan.toLowerCase().includes(query) ||
+                    (item.media && item.media.toLowerCase().includes(query))
+                );
+                renderArtikel(filtered);
+            });
+        });
+
+function renderArtikel(items) {
+            const grid = document.getElementById('artikel-grid');
+            if (items.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-gray-500">
+                        <p class="text-lg font-semibold">Tidak ada artikel yang cocok.</p>
+                        <p class="text-sm mt-1">Coba kata kunci pencarian yang lain.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = items.map(item => `
+                <div onclick="window.open('${item.link}', '_blank')" class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="bg-gray-100 h-52 overflow-hidden relative">
+                            <img src="${item.gambar}" alt="${item.judul}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop'">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full font-bold shadow-sm">${item.media}</span>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs text-utama-600 font-medium flex items-center gap-1.5 mb-1">
+                                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                ${item.tanggal}
+                            </span>
+                            <h3 class="font-bold text-gray-800 text-lg mt-1 group-hover:text-utama-600 transition line-clamp-2">${item.judul}</h3>
+                            <p class="text-gray-500 text-xs mt-2 leading-relaxed line-clamp-3">${item.ringkasan}</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-4 text-right">
+                        <span class="text-xs text-utama-600 font-semibold group-hover:translate-x-1 transition transform inline-block">Baca Selengkapnya →</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+
+    <script type="module">
+        import { renderHeader, initHeaderEvents } from './src/components/Header.js';
+        import { renderFooter } from './src/components/Footer.js';
+
+        document.getElementById('header-container').innerHTML = renderHeader('kkn');
+        document.getElementById('footer-container').innerHTML = renderFooter();
+        initHeaderEvents();
+    </script>
+</body>
+</html>

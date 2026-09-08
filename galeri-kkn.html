@@ -20,16 +20,10 @@
                     },
                     colors: {
                         utama: {
-                            50: '#f6f9f2',
-                            100: '#e9f2df',
-                            200: '#d1e4be',
-                            500: '#74A12E', /* Base Color Matcha */
-                            600: '#5a8022',
-                            700: '#46631d',
-                            900: '#23330e',
+                            50: '#f6f9f2', 100: '#e9f2df', 200: '#d1e4be',
+                            500: '#74A12E', 600: '#5a8022', 700: '#46631d', 900: '#23330e',
                         },
-                        gelap: '#111827',
-                        abu: '#F9FAFB',
+                        gelap: '#111827', abu: '#F9FAFB',
                     }
                 }
             }
@@ -38,9 +32,7 @@
     <style>
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
 <body class="bg-abu text-gelap flex flex-col min-h-screen">
@@ -62,6 +54,7 @@
             </div>
         </div>
 
+        <!-- SECTION: PROGRAM KERJA -->
         <section class="mb-14 relative">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-3 mb-6">
                 <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
@@ -82,11 +75,10 @@
                     <a href="proker-lengkap.html" class="text-sm font-semibold text-utama-700 hover:text-utama-800 bg-utama-50 px-4 py-2 rounded-lg transition">Lihat Selengkapnya</a>
                 </div>
             </div>
-            
-            <div id="proker-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth pb-4">
-                </div>
+            <div id="proker-slider" class="flex gap-6 overflow-x-hidden scroll-smooth pb-4 pt-2"></div>
         </section>
 
+        <!-- SECTION: GALERI DOKUMENTASI -->
         <section class="mb-14 relative">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-3 mb-6">
                 <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
@@ -107,13 +99,39 @@
                     <a href="galeri-lengkap.html" class="text-sm font-semibold text-utama-700 hover:text-utama-800 bg-utama-50 px-4 py-2 rounded-lg transition">Lihat Selengkapnya</a>
                 </div>
             </div>
-            
-            <div id="galeri-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth pb-4">
-                </div>
+            <div id="galeri-slider" class="flex gap-6 overflow-x-hidden scroll-smooth pb-4 pt-2"></div>
         </section>
 
-        <!-- Section Struktur Organisasi KKN (5 Kotak Utama dengan Popup Modal) -->
-        <section class="bg-white p-6 md:p-8 rounded-xl border border-gray-100 shadow-sm">
+        <!-- SECTION: ARTIKEL & LIPUTAN (YANG BARU DIPINDAHKAN) -->
+        <section class="mb-14 relative">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-3 mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-utama-100 text-utama-600 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                    </span>
+                    Liputan & Berita KKN
+                </h2>
+                <div class="flex items-center gap-3">
+                    <div class="flex gap-2">
+                        <!-- Disini fungsi slide diganti targetnya ke 'artikel-slider' -->
+                        <button onclick="slide('artikel-slider', -1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-utama-600 transition shadow-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button onclick="slide('artikel-slider', 1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-utama-600 transition shadow-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                    <a href="artikel-lengkap.html" class="text-sm font-semibold text-utama-700 hover:text-utama-800 bg-utama-50 px-4 py-2 rounded-lg transition">Lihat Selengkapnya</a>
+                </div>
+            </div>
+            
+            <div id="artikel-slider" class="flex gap-6 overflow-x-hidden scroll-smooth pb-4 pt-2">
+                <!-- Data Artikel akan masuk ke sini -->
+            </div>
+        </section>
+
+                <!-- SECTION: STRUKTUR ORGANISASI KKN -->
+        <section class="bg-white p-6 md:p-8 rounded-xl border border-gray-100 shadow-sm mb-14">
             <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3 flex items-center gap-3">
                 <span class="w-10 h-10 rounded-xl bg-utama-100 text-utama-600 flex items-center justify-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -122,9 +140,7 @@
             </h2>
             <p class="text-gray-500 text-sm mb-6">Klik pada masing-masing kotak divisi untuk melihat daftar nama lengkap dan foto anggota.</p>
             
-            <!-- 5 Box Utama -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
-                
                 <!-- Box 1: KSB -->
                 <div onclick="openTeamModal('ksb')" class="p-5 bg-gray-50 rounded-xl border border-gray-100 flex flex-col items-center hover:border-utama-500 hover:shadow-md transition cursor-pointer group">
                     <div class="w-16 h-16 bg-utama-100 text-utama-700 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
@@ -174,7 +190,6 @@
                     <span class="text-xs text-gray-500 font-medium mt-1">Sarana & Prasarana</span>
                     <span class="text-[10px] text-gray-400 mt-2 underline">Klik lihat anggota</span>
                 </div>
-
             </div>
         </section>
 
@@ -184,20 +199,14 @@
                 <button onclick="closeTeamModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
-                
                 <h3 id="modalTitle" class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Nama Divisi</h3>
                 <p class="text-xs text-gray-500 mb-6">Daftar anggota yang bertugas di bagian ini.</p>
-                
-                <!-- Kontainer Daftar Anggota (Akan diisi lewat JavaScript) -->
-                <div id="modalMemberList" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- Data anggota masuk otomatis di sini -->
-                </div>
+                <div id="modalMemberList" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
             </div>
         </div>
 
-        <!-- Script untuk Mengatur Data dan Interaksi Popup -->
         <script>
-            // Database Anggota per Divisi
+            // Database Anggota per Divisi (SAMA SEPERTI SEBELUMNYA)
             const teamData = {
                 ksb: {
                     title: "Pengurus Inti (KSB)",
@@ -291,22 +300,18 @@
                 document.body.style.overflow = 'auto';
             }
 
-            // Tutup modal jika mengklik area luar kotak popup
             window.addEventListener('click', (e) => {
                 const modal = document.getElementById('teamModal');
-                if (e.target === modal) {
-                    closeTeamModal();
-                }
+                if (e.target === modal) closeTeamModal();
             });
         </script>
-
     </main>
 
     <div id="footer-container"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Fetch Program Kerja dari proker.json
+            // 1. Fetch Program Kerja
             fetch('./src/data/proker.json')
                 .then(res => res.json())
                 .then(prokerData => {
@@ -325,7 +330,7 @@
                 })
                 .catch(err => console.error('Gagal memuat proker.json:', err));
 
-            // Fetch Galeri Dokumentasi dari galeri.json
+            // 2. Fetch Galeri Dokumentasi
             fetch('./src/data/galeri.json')
                 .then(res => res.json())
                 .then(galeriData => {
@@ -350,8 +355,48 @@
                     });
                 })
                 .catch(err => console.error('Gagal memuat galeri.json:', err));
+
+            // 3. Fetch Liputan & Artikel (YANG BARU DIPINDAHKAN)
+// 3. Fetch Liputan & Artikel (Kembali ke artikel-detail.html)
+            fetch('./src/data/artikel.json')
+                .then(res => res.json())
+                .then(artikelData => {
+                    const artikelSlider = document.getElementById('artikel-slider');
+                    artikelSlider.innerHTML = '';
+                    
+                    artikelData.forEach(item => {
+                        artikelSlider.innerHTML += `
+                            <article class="w-[85vw] sm:w-[45vw] md:w-[calc(33.333%-16px)] flex-shrink-0 snap-start bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group cursor-pointer" onclick="window.open('${item.link}', '_blank')">
+                                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                                    <img src="${item.gambar}" alt="${item.judul}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop'">
+                                    <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                                        ${item.media}
+                                    </span>
+                                </div>
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-2">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        <span>${item.tanggal}</span>
+                                    </div>
+                                    <h3 class="font-bold text-gray-800 text-base mb-2 group-hover:text-utama-600 transition-colors line-clamp-2">
+                                        ${item.judul}
+                                    </h3>
+                                    <p class="text-gray-500 text-xs leading-relaxed mb-6 line-clamp-3">
+                                        ${item.ringkasan}
+                                    </p>
+                                    <span class="mt-auto text-xs text-utama-600 font-bold inline-flex items-center gap-1">
+                                        Baca Selengkapnya
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    </span>
+                                </div>
+                            </article>
+                        `;
+                    });
+                })
+                .catch(err => console.error('Gagal memuat artikel.json:', err));
         });
 
+        // 4. Fungsi Slide Umum (Bisa dipakai semua Slider di halaman ini)
         function slide(sliderId, direction) {
             const slider = document.getElementById(sliderId);
             const scrollAmount = slider.offsetWidth > 768 ? slider.offsetWidth / 3 : slider.offsetWidth;
