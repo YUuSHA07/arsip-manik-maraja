@@ -130,7 +130,7 @@
             </div>
         </section>
 
-                <!-- SECTION: STRUKTUR ORGANISASI KKN -->
+        <!-- SECTION: STRUKTUR ORGANISASI KKN -->
         <section class="bg-white p-6 md:p-8 rounded-xl border border-gray-100 shadow-sm mb-14">
             <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3 flex items-center gap-3">
                 <span class="w-10 h-10 rounded-xl bg-utama-100 text-utama-600 flex items-center justify-center">
@@ -141,13 +141,13 @@
             <p class="text-gray-500 text-sm mb-6">Klik pada masing-masing kotak divisi untuk melihat daftar nama lengkap dan foto anggota.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
-                <!-- Box 1: KSB -->
+                <!-- Box 1: KKSB -->
                 <div onclick="openTeamModal('ksb')" class="p-5 bg-gray-50 rounded-xl border border-gray-100 flex flex-col items-center hover:border-utama-500 hover:shadow-md transition cursor-pointer group">
                     <div class="w-16 h-16 bg-utama-100 text-utama-700 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
                     </div>
-                    <h4 class="font-bold text-gray-800 text-base">Inti (KSB)</h4>
-                    <span class="text-xs text-utama-600 font-semibold mt-1">Ketua, Sekretaris, Bendahara</span>
+                    <h4 class="font-bold text-gray-800 text-base">Inti (KKSB)</h4>
+                    <span class="text-xs text-utama-600 font-semibold mt-1">Ketua, Korlap, Sekretaris, Bendahara</span>
                     <span class="text-[10px] text-gray-400 mt-2 underline">Klik lihat anggota</span>
                 </div>
 
@@ -206,14 +206,15 @@
         </div>
 
         <script>
-            // Database Anggota per Divisi (SAMA SEPERTI SEBELUMNYA)
             const teamData = {
                 ksb: {
-                    title: "Pengurus Inti (KSB)",
+                    title: "Pengurus Inti (KKSB)",
                     members: [
-                        { name: "Nama Ketua", role: "Ketua Kelompok", photo: "./assets/img/anggota/ketua.jpg" },
-                        { name: "Nama Sekretaris", role: "Sekretaris", photo: "./assets/img/anggota/sekretaris.jpg" },
-                        { name: "Nama Bendahara", role: "Bendahara", photo: "./assets/img/anggota/bendahara.jpg" }
+                        { name: "Surya Sobirin Singarimbun", role: "Ketua Kelompok", photo: "./assets/img/anggota/ketua.jpg" },
+                        { name: "Fayyaz Haqqani", role: "Koordinator Lapangan", photo: "./assets/img/anggota/korlap.jpg" },
+                        { name: "Suci Wulandari Amidar", role: "Sekretaris", photo: "./assets/img/anggota/sekretaris.jpg" },
+                        { name: "Alya Rahayu", role: "Wakil Sekretaris", photo: "./assets/img/anggota/wakil_sekretaris.jpg" },
+                        { name: "Nayara Sabila Lubis", role: "Bendahara", photo: "./assets/img/anggota/bendahara.jpg" }
                     ]
                 },
                 acara: {
@@ -356,8 +357,7 @@
                 })
                 .catch(err => console.error('Gagal memuat galeri.json:', err));
 
-            // 3. Fetch Liputan & Artikel (YANG BARU DIPINDAHKAN)
-// 3. Fetch Liputan & Artikel (Kembali ke artikel-detail.html)
+            // 3. Fetch Liputan & Artikel
             fetch('./src/data/artikel.json')
                 .then(res => res.json())
                 .then(artikelData => {
