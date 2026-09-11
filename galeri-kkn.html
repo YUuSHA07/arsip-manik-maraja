@@ -102,7 +102,7 @@
             <div id="galeri-slider" class="flex gap-6 overflow-x-hidden scroll-smooth pb-4 pt-2"></div>
         </section>
 
-        <!-- SECTION: ARTIKEL & LIPUTAN (YANG BARU DIPINDAHKAN) -->
+        <!-- SECTION: ARTIKEL & LIPUTAN -->
         <section class="mb-14 relative">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-3 mb-6">
                 <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
@@ -113,7 +113,6 @@
                 </h2>
                 <div class="flex items-center gap-3">
                     <div class="flex gap-2">
-                        <!-- Disini fungsi slide diganti targetnya ke 'artikel-slider' -->
                         <button onclick="slide('artikel-slider', -1)" class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-utama-600 transition shadow-sm">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
@@ -151,13 +150,13 @@
                     <span class="text-[10px] text-gray-400 mt-2 underline">Klik lihat anggota</span>
                 </div>
 
-                <!-- Box 2: Divisi Acara -->
+                <!-- Box 2: Divisi Acara & Humas -->
                 <div onclick="openTeamModal('acara')" class="p-5 bg-gray-50 rounded-xl border border-gray-100 flex flex-col items-center hover:border-utama-500 hover:shadow-md transition cursor-pointer group">
                     <div class="w-16 h-16 bg-utama-100 text-utama-700 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                     </div>
-                    <h4 class="font-bold text-gray-800 text-base">Divisi Acara</h4>
-                    <span class="text-xs text-gray-500 font-medium mt-1">Program & Kegiatan</span>
+                    <h4 class="font-bold text-gray-800 text-base">Divisi Acara & Humas</h4>
+                    <span class="text-xs text-gray-500 font-medium mt-1">Program, Kegiatan & Humas</span>
                     <span class="text-[10px] text-gray-400 mt-2 underline">Klik lihat anggota</span>
                 </div>
 
@@ -194,15 +193,23 @@
         </section>
 
         <!-- Modal Popup Anggota Divisi -->
-        <div id="teamModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl max-w-2xl w-full p-6 md:p-8 relative shadow-2xl animate-fade-in max-h-[85vh] overflow-y-auto">
-                <button onclick="closeTeamModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition">
+        <div id="teamModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity">
+            <div class="bg-white rounded-2xl max-w-4xl w-full p-6 md:p-8 relative shadow-2xl animate-fade-in max-h-[90vh] overflow-y-auto">
+                <button onclick="closeTeamModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition z-10">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
                 <h3 id="modalTitle" class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Nama Divisi</h3>
-                <p class="text-xs text-gray-500 mb-6">Daftar anggota yang bertugas di bagian ini.</p>
-                <div id="modalMemberList" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+                <p class="text-xs text-gray-500 mb-6">Daftar anggota divisi. Klik foto untuk memperbesar tampilan.</p>
+                <div id="modalMemberList" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"></div>
             </div>
+        </div>
+
+        <!-- Modal Zoom Foto (Lightbox) -->
+        <div id="zoomModal" class="fixed inset-0 z-[60] hidden bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+            <button onclick="closeZoomModal()" class="absolute top-5 right-5 text-white/70 hover:text-white bg-black/50 hover:bg-black p-2 rounded-full transition z-50">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <img id="zoomedImage" src="" alt="Zoomed Foto" class="max-w-full max-h-[95vh] object-contain rounded-xl shadow-2xl scale-95 transition-transform duration-300">
         </div>
 
         <script>
@@ -210,60 +217,60 @@
                 ksb: {
                     title: "Pengurus Inti (KKSB)",
                     members: [
-                        { name: "Surya Sobirin Singarimbun", role: "Ketua Kelompok", photo: "./assets/img/anggota/ketua.jpg" },
-                        { name: "Fayyaz Haqqani", role: "Koordinator Lapangan", photo: "./assets/img/anggota/korlap.jpg" },
-                        { name: "Suci Wulandari Amidar", role: "Sekretaris", photo: "./assets/img/anggota/sekretaris.jpg" },
-                        { name: "Alya Rahayu", role: "Wakil Sekretaris", photo: "./assets/img/anggota/wakil_sekretaris.jpg" },
-                        { name: "Nayara Sabila Lubis", role: "Bendahara", photo: "./assets/img/anggota/bendahara.jpg" }
+                        { name: "Surya Sobirin Singarimbun", role: "Ketua Kelompok", photo: "./assets/img/anggota/30.png" },
+                        { name: "Fayyaz Haqqani", role: "Koordinator Lapangan", photo: "./assets/img/anggota/13.png" },
+                        { name: "Suci Wulandari Amidar", role: "Sekretaris", photo: "./assets/img/anggota/28.png" },
+                        { name: "Alya Rahayu", role: "Wakil Sekretaris", photo: "./assets/img/anggota/5.png" },
+                        { name: "Nayara Sabila Lubis", role: "Bendahara", photo: "./assets/img/anggota/21.png" }
                     ]
                 },
                 acara: {
-                    title: "Divisi Acara",
+                    title: "Divisi Acara & Humas",
                     members: [
-                        { name: "Faiqa Azzahra Aisy", role: "Penanggung Jawab Acara", photo: "./assets/img/anggota/acara1.jpg" },
-                        { name: "Aldi Nur", role: "Anggota Acara", photo: "./assets/img/anggota/acara2.jpg" },
-                        { name: "Sri Rezeki Rohmaia", role: "Anggota Acara", photo: "./assets/img/anggota/acara2.jpg" },
-                        { name: "Aqila Zahra Harahap", role: "Anggota Acara", photo: "./assets/img/anggota/acara2.jpg" },
-                        { name: "Rizki Khoiril Waladi", role: "Anggota Acara", photo: "./assets/img/anggota/acara2.jpg" },
-                        { name: "Khairunnisa", role: "Anggota Acara", photo: "./assets/img/anggota/acara2.jpg" },
-                        { name: "Anggun Muliya Ningsih", role: "Anggota Acara", photo: "./assets/img/anggota/acara2.jpg" },
-                        { name: "Ainun Nisa Azahra", role: "Anggota Acara", photo: "./assets/img/anggota/acara2.jpg" }
+                        { name: "Faiqa Azzahra Aisy", role: "Penanggung Jawab Acara", photo: "./assets/img/anggota/12.png" },
+                        { name: "Aldi Nur", role: "Anggota Acara", photo: "./assets/img/anggota/4.png" },
+                        { name: "Sri Rezeki Rohmaia", role: "Anggota Acara", photo: "./assets/img/anggota/27.png" },
+                        { name: "Aqila Zahra Harahap", role: "Anggota Acara", photo: "./assets/img/anggota/7.png" },
+                        { name: "Rizki Khoiril Waladi", role: "Anggota Acara", photo: "./assets/img/anggota/25.png" },
+                        { name: "Khairunnisa", role: "Anggota Acara", photo: "./assets/img/anggota/14.png" },
+                        { name: "Anggun Muliya Ningsih", role: "Anggota Acara", photo: "./assets/img/anggota/34.png" },
+                        { name: "Ainun Nisa Azahra", role: "Anggota Acara", photo: "./assets/img/anggota/33.png" }
                     ]
                 },
                 pdd: {
                     title: "Divisi PDD (Publikasi, Dekorasi & Dokumentasi)",
                     members: [
-                        { name: "Yusrizal Hakim", role: "PJ Dokumentasi / Web", photo: "./assets/img/anggota/pdd1.jpg" },
-                        { name: "Qisti Azraladiba Batubara", role: "Anggota PDD", photo: "./assets/img/anggota/pdd2.jpg" },
-                        { name: "⁠Alya Dwi Kinanti", role: "Anggota PDD", photo: "./assets/img/anggota/pdd2.jpg" },
-                        { name: "⁠Adelia Dwi Putri", role: "Anggota PDD", photo: "./assets/img/anggota/pdd2.jpg" },
-                        { name: "⁠Dhafa Hibrizi Sitorus", role: "Anggota PDD", photo: "./assets/img/anggota/pdd2.jpg" }
+                        { name: "Yusrizal Hakim", role: "PJ Dokumentasi / Web", photo: "./assets/img/anggota/31.png" },
+                        { name: "Qisti Azraladiba Batubara", role: "Anggota PDD", photo: "./assets/img/anggota/23.png" },
+                        { name: "⁠Alya Dwi Kinanti", role: "Anggota PDD", photo: "./assets/img/anggota/6.png" },
+                        { name: "⁠Adelia Dwi Putri", role: "Anggota PDD", photo: "./assets/img/anggota/2.png" },
+                        { name: "⁠Dhafa Hibrizi Sitorus", role: "Anggota PDD", photo: "./assets/img/anggota/8.png" }
                     ]
                 },
                 logistik: {
                     title: "Divisi Logistik",
                     members: [
-                        { name: "Muhammad Rasyid", role: "Penanggung Jawab Logistik", photo: "./assets/img/anggota/logistik1.jpg" },
-                        { name: "Muhammad Arief Suandi", role: "Anggota Logistik", photo: "./assets/img/anggota/logistik2.jpg" },
-                        { name: "Nayla Imany", role: "Anggota Logistik", photo: "./assets/img/anggota/logistik2.jpg" },
-                        { name: "Siti Hany Humairoh", role: "Anggota Logistik", photo: "./assets/img/anggota/logistik2.jpg" },
-                        { name: "Eka Aprilla Maulana", role: "Anggota Logistik", photo: "./assets/img/anggota/logistik2.jpg" },
-                        { name: "A'idah Zhafirah Nor Polem", role: "Anggota Logistik", photo: "./assets/img/anggota/logistik2.jpg" },
-                        { name: "Annisa Delisaputri Pasaribu", role: "Anggota Logistik", photo: "./assets/img/anggota/logistik2.jpg" }
+                        { name: "Muhammad Rasyid", role: "Penanggung Jawab Logistik", photo: "./assets/img/anggota/19.png" },
+                        { name: "Muhammad Arief Suandi", role: "Anggota Logistik", photo: "./assets/img/anggota/17.png" },
+                        { name: "Nayla Imany", role: "Anggota Logistik", photo: "./assets/img/anggota/20.png" },
+                        { name: "Siti Hany Humairoh", role: "Anggota Logistik", photo: "./assets/img/anggota/26.png" },
+                        { name: "Eka Aprilla Maulana", role: "Anggota Logistik", photo: "./assets/img/anggota/10.png" },
+                        { name: "A'idah Zhafirah Nor Polem", role: "Anggota Logistik", photo: "./assets/img/anggota/1.png" },
+                        { name: "Annisa Delisaputri Pasaribu", role: "Anggota Logistik", photo: "./assets/img/anggota/32.png" }
                     ]
                 },
                 sarpras: {
                     title: "Divisi Sarpras (Sarana & Prasarana)",
                     members: [
-                        { name: "Nama Anggota 1", role: "Penanggung Jawab Sarpras", photo: "./assets/img/anggota/sarpras1.jpg" },
-                        { name: "Muhammad Nabhan Akbar Marpaung", role: "Anggota Sarpras", photo: "./assets/img/anggota/nabhan.jpg" },
-                        { name: "Sulthan Fakhri Wibowo", role: "Anggota Sarpras", photo: "./assets/img/anggota/sarpras2.jpg" },
-                        { name: "Muhammad Alpin Harpandy", role: "Anggota Sarpras", photo: "./assets/img/anggota/sarpras2.jpg" },
-                        { name: "M Choirul Amri", role: "Anggota Sarpras", photo: "./assets/img/anggota/sarpras2.jpg" },
-                        { name: "Risky Ananta Pradana", role: "Anggota Sarpras", photo: "./assets/img/anggota/sarpras2.jpg" },
-                        { name: "Fadhil Mardino", role: "Anggota Sarpras", photo: "./assets/img/anggota/sarpras2.jpg" },
-                        { name: "Nurul Fitria Miraza", role: "Anggota Sarpras", photo: "./assets/img/anggota/sarpras2.jpg" },
-                        { name: "Dhifa Sandria", role: "Anggota Sarpras", photo: "./assets/img/anggota/sarpras2.jpg" }
+                        { name: "Nama Anggota 1", role: "Penanggung Jawab Sarpras", photo: "./assets/img/anggota/3.png" },
+                        { name: "Muhammad Nabhan Akbar Marpaung", role: "Anggota Sarpras", photo: "./assets/img/anggota/18.png" },
+                        { name: "Sulthan Fakhri Wibowo", role: "Anggota Sarpras", photo: "./assets/img/anggota/29.png" },
+                        { name: "Muhammad Alpin Harpandy", role: "Anggota Sarpras", photo: "./assets/img/anggota/16.png" },
+                        { name: "M Choirul Amri", role: "Anggota Sarpras", photo: "./assets/img/anggota/15.png" },
+                        { name: "Risky Ananta Pradana", role: "Anggota Sarpras", photo: "./assets/img/anggota/24.png" },
+                        { name: "Fadhil Mardino", role: "Anggota Sarpras", photo: "./assets/img/anggota/11.png" },
+                        { name: "Nurul Fitria Miraza", role: "Anggota Sarpras", photo: "./assets/img/anggota/22.png" },
+                        { name: "Dhifa Sandria", role: "Anggota Sarpras", photo: "./assets/img/anggota/9.png" }
                     ]
                 }
             };
@@ -279,13 +286,20 @@
                 titleEl.innerText = data.title;
                 listEl.innerHTML = '';
 
+                // Perubahan layout: Rasio foto diubah menjadi aspect-[3/5] agar lebih panjang/portrait
                 data.members.forEach(member => {
                     listEl.innerHTML += `
-                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-xl border border-gray-100">
-                            <img src="${member.photo}" alt="${member.name}" class="w-14 h-14 object-cover rounded-full border border-gray-200 shrink-0 bg-gray-200" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'">
-                            <div>
-                                <h4 class="font-bold text-gray-800 text-sm">${member.name}</h4>
-                                <span class="text-xs text-utama-600 font-semibold">${member.role}</span>
+                        <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm flex flex-col group transition hover:shadow-md">
+                            <div class="relative cursor-zoom-in w-full aspect-[3/5] overflow-hidden bg-gray-200" onclick="openZoomModal('${member.photo}')">
+                                <img src="${member.photo}" alt="${member.name}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop'">
+                                <!-- Icon Zoom Hover Overlay -->
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <svg class="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                </div>
+                            </div>
+                            <div class="p-3 text-center bg-white border-t border-gray-100 shrink-0">
+                                <h4 class="font-bold text-gray-800 text-sm leading-tight truncate">${member.name}</h4>
+                                <span class="text-[11px] text-utama-600 font-semibold mt-1 block truncate">${member.role}</span>
                             </div>
                         </div>
                     `;
@@ -301,9 +315,44 @@
                 document.body.style.overflow = 'auto';
             }
 
+            // Fitur Zoom Foto
+            function openZoomModal(src) {
+                const zoomModal = document.getElementById('zoomModal');
+                const zoomedImage = document.getElementById('zoomedImage');
+                
+                zoomedImage.src = src;
+                zoomModal.classList.remove('hidden');
+                
+                // Trigger reflow & transisi efek masuk
+                void zoomModal.offsetWidth;
+                zoomModal.classList.remove('opacity-0');
+                zoomedImage.classList.remove('scale-95');
+                zoomedImage.classList.add('scale-100');
+            }
+
+            function closeZoomModal() {
+                const zoomModal = document.getElementById('zoomModal');
+                const zoomedImage = document.getElementById('zoomedImage');
+                
+                zoomModal.classList.add('opacity-0');
+                zoomedImage.classList.remove('scale-100');
+                zoomedImage.classList.add('scale-95');
+                
+                // Tunggu transisi selesai sebelum di-hide sepenuhnya
+                setTimeout(() => {
+                    zoomModal.classList.add('hidden');
+                    zoomedImage.src = '';
+                }, 300);
+            }
+
+            // Tutup modal jika mengklik area luar
             window.addEventListener('click', (e) => {
-                const modal = document.getElementById('teamModal');
-                if (e.target === modal) closeTeamModal();
+                const teamModal = document.getElementById('teamModal');
+                const zoomModal = document.getElementById('zoomModal');
+                const zoomedImage = document.getElementById('zoomedImage');
+
+                if (e.target === teamModal) closeTeamModal();
+                if (e.target === zoomModal && e.target !== zoomedImage) closeZoomModal();
             });
         </script>
     </main>
@@ -396,7 +445,7 @@
                 .catch(err => console.error('Gagal memuat artikel.json:', err));
         });
 
-        // 4. Fungsi Slide Umum (Bisa dipakai semua Slider di halaman ini)
+        // 4. Fungsi Slide Umum
         function slide(sliderId, direction) {
             const slider = document.getElementById(sliderId);
             const scrollAmount = slider.offsetWidth > 768 ? slider.offsetWidth / 3 : slider.offsetWidth;
